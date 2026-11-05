@@ -10,7 +10,7 @@ function wireGallery(gallery) {
   if (!img || !gallery.length) return;
   const show = (i) => {
     const g = gallery[i];
-    img.src = g.url; img.alt = g.title || "";
+    img.src = asset(g.url); img.alt = g.title || "";
     cap.innerHTML = `${g.title ? `<b>${esc(g.title)}</b>` : ""}${esc(g.description || "")}`;
     cap.hidden = !(g.title || g.description);
     page.querySelectorAll(".g-thumbs button").forEach((b) => b.setAttribute("aria-current", String(+b.dataset.i === i)));
@@ -51,7 +51,7 @@ function notFound() {
   document.title = "Not found – Invv";
   page.innerHTML = `<div class="loading">
     <p>There's no plugin called “${esc(slug)}”.</p>
-    <p><a class="btn" href="/#all">See all plugins</a></p></div>`;
+    <p><a class="btn" href="${ROOT}#all">See all plugins</a></p></div>`;
 }
 
 async function getJson(url) {
@@ -64,7 +64,7 @@ async function loadLive() {
   if (!slug) return notFound();
   // a generated page exists: go there (unless we were sent here because it didn't)
   const built = (typeof SNAPSHOT !== "undefined" && SNAPSHOT.some((x) => x.slug === slug)) || (typeof LOCAL !== "undefined" && LOCAL[slug]);
-  if (built && !params.has("from404")) return location.replace(`/${encodeURIComponent(slug)}/`);
+  if (built && !params.has("from404")) return location.replace(`${ROOT}${encodeURIComponent(slug)}/`);
 
   const all = await loadProjects();
   fillFooter(all);
@@ -114,8 +114,8 @@ function render(p, body, gallery, versions, all) {
     <section class="p-hero" style="--glow:${glow(p, .35)}">
       ${gallery[0] ? `<div class="bgimg" style="background-image:url('${esc(gallery[0].url)}')"></div>` : ""}
       <div class="p-hero-inner">
-        <p class="crumb"><a href="/">Home</a> / <a href="/#all">${typeOf(p)}s</a> / ${esc(p.title)}</p>
-        <img class="p-icon" src="${esc(p.icon_url)}" alt="" width="128" height="128">
+        <p class="crumb"><a href="${ROOT}">Home</a> / <a href="${ROOT}#all">${typeOf(p)}s</a> / ${esc(p.title)}</p>
+        <img class="p-icon" src="${esc(asset(p.icon_url))}" alt="" width="128" height="128">
         <div class="p-title"><h1>${esc(p.title)}</h1><p>${esc(p.description)}</p></div>
         <div class="p-actions">
           ${latest ? `<a class="btn" href="${modrinthUrl(p)}/version/${encodeURIComponent(latest.id)}">Download ${esc(latest.version_number)}</a>` : ""}

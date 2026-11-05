@@ -18,7 +18,7 @@ function renderHero() {
     const s = SPOTS[i];
     return `<a href="${pageUrl(p)}" title="${esc(p.title)}" tabindex="-1"
       style="left:${s.x}%;top:${s.y}%;transform:rotate(${s.r}deg);animation-delay:${s.d}s">
-      <img src="${esc(p.icon_url)}" alt="" width="64" height="64"></a>`;
+      <img src="${esc(asset(p.icon_url))}" alt="" width="64" height="64"></a>`;
   }).join("");
   const total = projects.reduce((s, p) => s + p.downloads, 0);
   document.getElementById("s-projects").textContent = projects.length;
@@ -32,7 +32,7 @@ function renderPodium() {
   document.getElementById("podium").innerHTML = placed.map(([p, i]) => `
     <a class="pod pod-${i + 1}" href="${pageUrl(p)}" style="--glow:${glow(p, .45)}">
       <span class="rank">#${i + 1}</span>
-      <img src="${esc(p.icon_url)}" alt="" width="128" height="128">
+      <img src="${esc(asset(p.icon_url))}" alt="" width="128" height="128">
       <h3>${esc(p.title)}</h3>
       <p>${esc(p.description)}</p>
       <span class="num"><b>${nf.format(p.downloads)}</b> downloads</span>
@@ -118,7 +118,7 @@ document.querySelectorAll(".show").forEach((el) => {
   const slug = [...el.classList].find((c) => c.startsWith("show-"))?.slice(5);
   if (!slug || !LOCAL[slug]) return;
   el.insertAdjacentHTML("afterbegin", `<span class="soon">Coming soon</span>`);
-  el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="/${slug}/">Read more</a>`);
+  el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="${ROOT}${slug}/">Read more</a>`);
 });
 
 loadProjects().then((list) => {

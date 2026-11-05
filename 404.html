@@ -6,34 +6,35 @@
 <title>Page not found – Invv</title>
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#f3a53a">
-<link rel="icon" href="/img/logo.svg" type="image/svg+xml">
-<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/Invv-strona/img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="/Invv-strona/img/favicon-32.png" sizes="32x32" type="image/png">
 <script>
-  // /<slug>/ for a plugin published after the last build: show it live instead.
   (function () {
-    var parts = location.pathname.split("/").filter(Boolean);
+    var base = "/Invv-strona/";
+    var rest = location.pathname.indexOf(base) === 0 ? location.pathname.slice(base.length) : "";
+    var parts = rest.split("/").filter(Boolean);
     var p = parts[0] || "";
     var isFile = /\.(html?|png|jpe?g|gif|svg|webp|ico|js|css|json|xml|txt|md)$/i.test(p);
     if (parts.length === 1 && /^[\w.-]+$/.test(p) && !isFile) {
-      location.replace("/plugin.html?p=" + encodeURIComponent(parts[0]) + "&from404=1");
+      location.replace(base + "plugin.html?p=" + encodeURIComponent(p) + "&from404=1");
     }
   })();
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/Invv-strona/style.css">
 </head>
 <body>
 <header class="top">
-  <a class="me" href="/"><img src="/img/logo.svg" alt="" width="34" height="34">Invv</a>
+  <a class="me" href="/Invv-strona/"><img src="/Invv-strona/img/logo.svg" alt="" width="34" height="34">Invv</a>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
 </header>
 <main>
   <div class="loading">
     <p style="font-size:64px;font-weight:800;margin:0;color:var(--ink)">404</p>
     <p>This page doesn't exist. Maybe it was renamed, or the link has a typo.</p>
-    <p><a class="btn" href="/#all">See all plugins</a></p>
+    <p><a class="btn" href="/Invv-strona/#all">See all plugins</a></p>
   </div>
 </main>
 </body>

@@ -14,6 +14,7 @@ import html
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.request
 from datetime import datetime, timezone
@@ -21,11 +22,25 @@ from datetime import datetime, timezone
 from markdown_it import MarkdownIt
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://invv111.github.io"
+
+
+def site_address():
+    """Where GitHub Pages serves this repo: owner.github.io/ for a repo named owner.github.io,
+    owner.github.io/<repo>/ for any other name. Read from the repo, so a rename just works."""
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if not repo:
+        url = subprocess.run(["git", "remote", "get-url", "origin"], cwd=ROOT, capture_output=True, text=True).stdout
+        m = re.search(r"github\.com[:/]([^/]+)/([^/]+?)(?:\.git)?\s*$", url)
+        repo = f"{m.group(1)}/{m.group(2)}" if m else "Invv111/Invv111.github.io"
+    owner, name = repo.split("/")
+    base = "/" if name.lower() == f"{owner.lower()}.github.io" else f"/{name}/"
+    return f"https://{owner.lower()}.github.io{base}".rstrip("/"), base
+
+
+SITE, BASE = site_address()
 USER = "invv"
 API = "https://api.modrinth.com/v2"
 DISCORD = "https://discord.gg/E9hpUj3E6G"
-AVATAR = "https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp"
 UA = "Invv111/invv111.github.io (site build)"
 
 MOD_LOADERS = {"fabric", "quilt", "neoforge", "forge"}
@@ -96,6 +111,16 @@ def absolute(url):
     return url if url.startswith("http") else SITE + "/" + url.lstrip("/")
 
 
+def rootrel(url):
+    """'img/x.png' -> '/img/x.png' in the templates; to_relative() later turns '/' into '../'"""
+    return url if url.startswith("http") else "/" + url.lstrip("/")
+
+
+def to_relative(page_html):
+    """the generated pages live one folder down, so every root path becomes ../"""
+    return re.sub(r'(href|src)="/(?!/)', r'\g<1>="../', page_html).replace("url('/", "url('../")
+
+
 def plain(text, n=200):
     """first n chars of a description, for meta tags"""
     t = re.sub(r"\s+", " ", text or "").strip()
@@ -106,7 +131,7 @@ def card(p):
     meta = ("<span>Coming soon</span>" if p.get("local")
             else f"<span><b>{p['downloads']:,}</b> downloads</span>")
     return f"""<li class="card"><a href="/{e(p['slug'])}/" style="--glow:{glow(p, .32)}">
-    <img class="icon" src="{e(p['icon_url'])}" alt="" width="64" height="64" loading="lazy">
+    <img class="icon" src="{e(rootrel(p['icon_url']))}" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>{e(p['title'])}</h3><span class="type">{type_of(p)}</span></span>
     <p>{e(p['description'])}</p>
     <span class="meta">{meta}<span>{e(version_range(p))}</span></span>
@@ -115,7 +140,7 @@ def card(p):
 
 HEADER = f"""<header class="top">
   <a class="me" href="/">
-    <img src="{AVATAR}" alt="" width="34" height="34">
+    <img src="/img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
   <nav aria-label="Main">
@@ -136,7 +161,7 @@ def footer(projects):
     return f"""<footer class="foot">
   <div class="foot-inner">
     <div class="foot-about">
-      <a class="me" href="/"><img src="{AVATAR}" alt="" width="34" height="34">Invv</a>
+      <a class="me" href="/"><img src="/img/logo.svg" alt="" width="34" height="34">Invv</a>
       <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
       <a class="btn btn-small" href="{DISCORD}">Join the Discord</a>
     </div>
@@ -210,14 +235,14 @@ def page(p, body_md, gallery, versions, projects):
             thumbs = '<div class="g-thumbs" role="list">' + "".join(
                 f'<button type="button" data-i="{i}" aria-current="{str(i == 0).lower()}" '
                 f'aria-label="Show screenshot {i + 1}{": " + e(g.get("title")) if g.get("title") else ""}">'
-                f'<img src="{e(g["url"])}" alt="" loading="lazy"></button>'
+                f'<img src="{e(rootrel(g["url"]))}" alt="" loading="lazy"></button>'
                 for i, g in enumerate(gallery)) + "</div>"
         cap = ""
         if g0.get("title") or g0.get("description"):
             cap = (f'{"<b>" + e(g0["title"]) + "</b>" if g0.get("title") else ""}{e(g0.get("description") or "")}')
         gal_html = f"""<div class="gallery">
           <figure class="g-main" style="margin:0">
-            <img id="g-img" src="{e(g0['url'])}" alt="{e(g0.get('title') or p['title'])}">
+            <img id="g-img" src="{e(rootrel(g0['url']))}" alt="{e(g0.get('title') or p['title'])}">
             <figcaption class="g-cap" id="g-cap"{'' if cap else ' hidden'}>{cap}</figcaption>
           </figure>
           {thumbs}
@@ -270,7 +295,9 @@ def page(p, body_md, gallery, versions, projects):
 <meta name="twitter:title" content="{e(p['title'])} – {type_of(p)}">
 <meta name="twitter:description" content="{e(desc)}">
 <meta name="twitter:image" content="{e(image)}">
-<link rel="icon" href="{e(p['icon_url'])}">
+<link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
@@ -286,7 +313,7 @@ def page(p, body_md, gallery, versions, projects):
     {hero_bg}
     <div class="p-hero-inner">
       <p class="crumb"><a href="/">Home</a> / <a href="/#all">{type_of(p)}s</a> / {e(p['title'])}</p>
-      <img class="p-icon" src="{e(p['icon_url'])}" alt="" width="128" height="128">
+      <img class="p-icon" src="{e(rootrel(p['icon_url']))}" alt="" width="128" height="128">
       <div class="p-title"><h1>{e(p['title'])}</h1><p>{e(p['description'])}</p></div>
       <div class="p-actions">{actions}</div>
       <div class="p-facts">{facts}</div>
@@ -296,7 +323,7 @@ def page(p, body_md, gallery, versions, projects):
   <div class="p-body">
     <div>
       {gal_html}
-      <article class="md">{md.render(body_md or "")}</article>
+      <article class="md"><!--@BODY@--></article>
     </div>
     <aside class="side">
       <div class="box"><h2>{'Release' if p.get('local') else 'Latest versions'}</h2>{ver_box}</div>
@@ -319,6 +346,11 @@ def page(p, body_md, gallery, versions, projects):
 </body>
 </html>
 """
+
+
+def render_page(p, body_md, gallery, versions, projects):
+    out = to_relative(page(p, body_md, gallery, versions, projects))
+    return out.replace("<!--@BODY@-->", md.render(body_md or ""))
 
 
 def main():
@@ -372,6 +404,9 @@ def main():
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         f.write("\n".join(urls) + "\n</urlset>\n")
 
+    patch_index()
+    write_404()
+
     # drop pages of projects that no longer exist
     names = {s for s, _ in built}
     for d in os.listdir(ROOT):
@@ -388,8 +423,77 @@ def write_page(p, body, gallery, versions, everything):
     d = os.path.join(ROOT, p["slug"])
     os.makedirs(d, exist_ok=True)
     with open(os.path.join(d, "index.html"), "w", encoding="utf-8", newline="\n") as f:
-        f.write(page(p, body, gallery, versions, everything))
+        f.write(render_page(p, body, gallery, versions, everything))
     open(os.path.join(d, ".generated"), "w").close()
+
+
+def patch_index():
+    """put the real site address into the home page's link-preview tags"""
+    path = os.path.join(ROOT, "index.html")
+    s = open(path, encoding="utf-8").read()
+    tags = f"""<!-- og: filled in by scripts/build.py with the site address -->
+<link rel="canonical" href="{SITE}/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Invv – Minecraft plugins">
+<meta property="og:url" content="{SITE}/">
+<meta property="og:title" content="Invv – Minecraft plugins">
+<meta property="og:description" content="Teleports, graves, an anti-xray, nametags, elevators and more. One jar for Paper, Folia, Spigot and Purpur, no dependencies.">
+<meta property="og:image" content="{SITE}/img/elevate-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}/img/elevate-1.jpg">
+<!-- /og -->"""
+    s = re.sub(r"<!-- og:.*?<!-- /og -->", lambda _: tags, s, flags=re.S)
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(s)
+
+
+def write_404():
+    """GitHub Pages shows 404.html at any depth, so it uses full paths from BASE.
+    An unknown /<slug>/ is sent to plugin.html, which renders a plugin published after the last build."""
+    b = BASE
+    with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found – Invv</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f3a53a">
+<link rel="icon" href="{b}img/logo.svg" type="image/svg+xml">
+<link rel="icon" href="{b}img/favicon-32.png" sizes="32x32" type="image/png">
+<script>
+  (function () {{
+    var base = {json.dumps(b)};
+    var rest = location.pathname.indexOf(base) === 0 ? location.pathname.slice(base.length) : "";
+    var parts = rest.split("/").filter(Boolean);
+    var p = parts[0] || "";
+    var isFile = /\\.(html?|png|jpe?g|gif|svg|webp|ico|js|css|json|xml|txt|md)$/i.test(p);
+    if (parts.length === 1 && /^[\\w.-]+$/.test(p) && !isFile) {{
+      location.replace(base + "plugin.html?p=" + encodeURIComponent(p) + "&from404=1");
+    }}
+  }})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{b}style.css">
+</head>
+<body>
+<header class="top">
+  <a class="me" href="{b}"><img src="{b}img/logo.svg" alt="" width="34" height="34">Invv</a>
+  <a class="btn btn-small" href="{DISCORD}">Discord</a>
+</header>
+<main>
+  <div class="loading">
+    <p style="font-size:64px;font-weight:800;margin:0;color:var(--ink)">404</p>
+    <p>This page doesn't exist. Maybe it was renamed, or the link has a typo.</p>
+    <p><a class="btn" href="{b}#all">See all plugins</a></p>
+  </div>
+</main>
+</body>
+</html>
+""")
 
 
 if __name__ == "__main__":

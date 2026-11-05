@@ -20,9 +20,7 @@
 <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "GravesSystem", "description": "GravesSystem replaces item drops on death with an immersive grave system that spawns the player’s head, preserves their exact inventory layout, displays a live hologram, and restores items instantly — all while remaining lightweight and highly performant.", "url": "https://invv111.github.io/Invv-strona/gravesystem/", "image": "https://cdn.modrinth.com/data/Z35SBdyF/c78400d0003d9219f340fe6246e4cd2e058181be_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/gravesystem", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 823}, "softwareVersion": "1.2"}</script>
 </head>
@@ -33,13 +31,14 @@
     <img src="../img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
-  <nav aria-label="Main">
+  <nav id="nav" aria-label="Main">
     <a href="../#popular">Popular</a>
     <a href="../#next">Coming next</a>
     <a href="../#all">All plugins</a>
     <a href="https://modrinth.com/user/invv">Modrinth</a>
   </nav>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main id="page" data-static>

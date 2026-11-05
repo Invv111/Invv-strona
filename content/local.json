@@ -4,7 +4,7 @@
   "local": true,
   "title": "Elevate",
   "description": "Jump to go up a floor, sneak to go down. Craftable elevators in 16 colors, floor numbers and named floors.",
-  "icon_url": "img/elevate-logo.png",
+  "icon_url": "img/elevate-logo.webp",
   "color": 7317724,
   "loaders": [
    "bukkit",
@@ -22,54 +22,74 @@
   "updated": "2026-11-01T00:00:00Z",
   "gallery": [
    {
-    "url": "img/elevate/1-elevate.jpg",
+    "url": "img/elevate/1-elevate.webp",
     "title": "Elevate",
-    "description": "A six-floor glass tower in a river valley at golden hour. Every floor has an elevator: jump to go up, sneak to go down."
+    "description": "A six-floor glass tower in a river valley at golden hour. Every floor has an elevator: jump to go up, sneak to go down.",
+    "thumb": "img/elevate/1-elevate-thumb.webp",
+    "og": "img/elevate/1-elevate.jpg"
    },
    {
-    "url": "img/elevate/2-floor-title.jpg",
+    "url": "img/elevate/2-floor-title.webp",
     "title": "Floor 3/6 · Library",
-    "description": "One jump from the storage room and you're in the library, with the floor number and its name on screen."
+    "description": "One jump from the storage room and you're in the library, with the floor number and its name on screen.",
+    "thumb": "img/elevate/2-floor-title-thumb.webp",
+    "og": "img/elevate/2-floor-title.jpg"
    },
    {
-    "url": "img/elevate/3-jump.jpg",
+    "url": "img/elevate/3-jump.webp",
     "title": "One jump, one floor",
-    "description": "Arriving in the lounge. A soft bell and a burst of particles at your feet, and you're upstairs."
+    "description": "Arriving in the lounge. A soft bell and a burst of particles at your feet, and you're upstairs.",
+    "thumb": "img/elevate/3-jump-thumb.webp",
+    "og": "img/elevate/3-jump.jpg"
    },
    {
-    "url": "img/elevate/4-colors.jpg",
+    "url": "img/elevate/4-colors.webp",
     "title": "Sixteen colors",
-    "description": "Every wool color makes its own elevator. Colors only connect to the same color, so shafts can run side by side."
+    "description": "Every wool color makes its own elevator. Colors only connect to the same color, so shafts can run side by side.",
+    "thumb": "img/elevate/4-colors-thumb.webp",
+    "og": "img/elevate/4-colors.jpg"
    },
    {
-    "url": "img/elevate/5-crafting.jpg",
+    "url": "img/elevate/5-crafting.webp",
     "title": "Craft it from wool",
-    "description": "Eight wool of one color around an ender pearl. The recipe shows up in the recipe book on its own."
+    "description": "Eight wool of one color around an ender pearl. The recipe shows up in the recipe book on its own.",
+    "thumb": "img/elevate/5-crafting-thumb.webp",
+    "og": "img/elevate/5-crafting.jpg"
    },
    {
-    "url": "img/elevate/6-anvil.jpg",
+    "url": "img/elevate/6-anvil.webp",
     "title": "Name your floors",
-    "description": "Rename an elevator in an anvil before you place it and the floor carries that name."
+    "description": "Rename an elevator in an anvil before you place it and the floor carries that name.",
+    "thumb": "img/elevate/6-anvil-thumb.webp",
+    "og": "img/elevate/6-anvil.jpg"
    },
    {
-    "url": "img/elevate/7-hint.jpg",
+    "url": "img/elevate/7-hint.webp",
     "title": "Always know where you are",
-    "description": "Step onto an elevator and the action bar shows your floor, its name and which way you can go."
+    "description": "Step onto an elevator and the action bar shows your floor, its name and which way you can go.",
+    "thumb": "img/elevate/7-hint-thumb.webp",
+    "og": "img/elevate/7-hint.jpg"
    },
    {
-    "url": "img/elevate/8-express.jpg",
+    "url": "img/elevate/8-express.webp",
     "title": "Express to the roof",
-    "description": "An orange shaft with only two stops goes from the lobby straight to the roof, past every floor in between."
+    "description": "An orange shaft with only two stops goes from the lobby straight to the roof, past every floor in between.",
+    "thumb": "img/elevate/8-express-thumb.webp",
+    "og": "img/elevate/8-express.jpg"
    },
    {
-    "url": "img/elevate/9-info.jpg",
+    "url": "img/elevate/9-info.webp",
     "title": "/elevate info",
-    "description": "Every floor in the shaft with its height and name, and an arrow where you stand."
+    "description": "Every floor in the shaft with its height and name, and an arrow where you stand.",
+    "thumb": "img/elevate/9-info-thumb.webp",
+    "og": "img/elevate/9-info.jpg"
    },
    {
-    "url": "img/elevate/10-night.jpg",
+    "url": "img/elevate/10-night.webp",
     "title": "Lights on",
-    "description": "The same tower after sunset. Elevators work the same day and night, in every world."
+    "description": "The same tower after sunset. Elevators work the same day and night, in every world.",
+    "thumb": "img/elevate/10-night-thumb.webp",
+    "og": "img/elevate/10-night.jpg"
    }
   ]
  },
@@ -78,7 +98,7 @@
   "local": true,
   "title": "Reap",
   "description": "Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.",
-  "icon_url": "img/reap-logo.png",
+  "icon_url": "img/reap-logo.webp",
   "color": 14725184,
   "loaders": [
    "bukkit",
@@ -96,44 +116,60 @@
   "updated": "2026-11-01T00:00:00Z",
   "gallery": [
    {
-    "url": "img/reap/1-reap.jpg",
+    "url": "img/reap/1-reap.webp",
     "title": "Reap",
-    "description": "A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting."
+    "description": "A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting.",
+    "thumb": "img/reap/1-reap-thumb.webp",
+    "og": "img/reap/1-reap.jpg"
    },
    {
-    "url": "img/reap/2-wave.jpg",
+    "url": "img/reap/2-wave.webp",
     "title": "The harvest wave",
-    "description": "A netherite hoe sweeps a 7×7 square of wheat. The crops are cut ring by ring, spreading out from where you clicked."
+    "description": "A netherite hoe sweeps a 7×7 square of wheat. The crops are cut ring by ring, spreading out from where you clicked.",
+    "thumb": "img/reap/2-wave-thumb.webp",
+    "og": "img/reap/2-wave.jpg"
    },
    {
-    "url": "img/reap/3-replant.jpg",
+    "url": "img/reap/3-replant.webp",
     "title": "Planted again, on the spot",
-    "description": "Every harvested crop is replanted at once with a little sparkle. One seed comes out of the drops, so your inventory stays untouched."
+    "description": "Every harvested crop is replanted at once with a little sparkle. One seed comes out of the drops, so your inventory stays untouched.",
+    "thumb": "img/reap/3-replant-thumb.webp",
+    "og": "img/reap/3-replant.jpg"
    },
    {
-    "url": "img/reap/4-action-bar.jpg",
+    "url": "img/reap/4-action-bar.webp",
     "title": "+36 crops",
-    "description": "The action bar sums up every harvest: how many crops were cut and what dropped. A Fortune III hoe brings in extra seeds and carrots."
+    "description": "The action bar sums up every harvest: how many crops were cut and what dropped. A Fortune III hoe brings in extra seeds and carrots.",
+    "thumb": "img/reap/4-action-bar-thumb.webp",
+    "og": "img/reap/4-action-bar.jpg"
    },
    {
-    "url": "img/reap/5-every-crop.jpg",
+    "url": "img/reap/5-every-crop.webp",
     "title": "Every crop",
-    "description": "Wheat, carrots, potatoes, beetroots, nether wart, cocoa on the jungle tree, sugar cane and cactus. Everything on this farm is harvested with a right-click."
+    "description": "Wheat, carrots, potatoes, beetroots, nether wart, cocoa on the jungle tree, sugar cane and cactus. Everything on this farm is harvested with a right-click.",
+    "thumb": "img/reap/5-every-crop-thumb.webp",
+    "og": "img/reap/5-every-crop.jpg"
    },
    {
-    "url": "img/reap/6-sugar-cane.jpg",
+    "url": "img/reap/6-sugar-cane.webp",
     "title": "Sugar cane, cactus and bamboo",
-    "description": "One swing of the hoe cuts every column in reach above the bottom block, so the whole row grows straight back."
+    "description": "One swing of the hoe cuts every column in reach above the bottom block, so the whole row grows straight back.",
+    "thumb": "img/reap/6-sugar-cane-thumb.webp",
+    "og": "img/reap/6-sugar-cane.jpg"
    },
    {
-    "url": "img/reap/7-farmland.jpg",
+    "url": "img/reap/7-farmland.webp",
     "title": "No more trampling",
-    "description": "A cow, sheep and a pig dropped right onto bare farmland, and it stays farmland. Players can't trample it either."
+    "description": "A cow, sheep and a pig dropped right onto bare farmland, and it stays farmland. Players can't trample it either.",
+    "thumb": "img/reap/7-farmland-thumb.webp",
+    "og": "img/reap/7-farmland.jpg"
    },
    {
-    "url": "img/reap/8-stats.jpg",
+    "url": "img/reap/8-stats.webp",
     "title": "/reap stats and toggle",
-    "description": "Every player can see how many crops they have harvested and switch right-click harvesting off for themselves."
+    "description": "Every player can see how many crops they have harvested and switch right-click harvesting off for themselves.",
+    "thumb": "img/reap/8-stats-thumb.webp",
+    "og": "img/reap/8-stats.jpg"
    }
   ]
  },
@@ -142,7 +178,7 @@
   "local": true,
   "title": "Lounge",
   "description": "Sit on stairs, slabs and carpets, /sit, /lay with your own skin, /crawl and ride other players.",
-  "icon_url": "img/lounge-logo.png",
+  "icon_url": "img/lounge-logo.webp",
   "color": 12613706,
   "loaders": [
    "paper",
@@ -157,34 +193,46 @@
   "updated": "2026-11-01T00:00:00Z",
   "gallery": [
    {
-    "url": "img/lounge/1-take-a-seat.jpg",
+    "url": "img/lounge/1-take-a-seat.webp",
     "title": "Take a seat",
-    "description": "Friends gathered around a campfire at sunset. Right-click any stair with an empty hand and you sit on the step, facing away from the backrest."
+    "description": "Friends gathered around a campfire at sunset. Right-click any stair with an empty hand and you sit on the step, facing away from the backrest.",
+    "thumb": "img/lounge/1-take-a-seat-thumb.webp",
+    "og": "img/lounge/1-take-a-seat.jpg"
    },
    {
-    "url": "img/lounge/2-any-block.jpg",
+    "url": "img/lounge/2-any-block.webp",
     "title": "Stairs, slabs, carpets",
-    "description": "A picnic on a carpet next to a slab bench. Every stair, slab and carpet works out of the box, and you can add your own blocks in one line."
+    "description": "A picnic on a carpet next to a slab bench. Every stair, slab and carpet works out of the box, and you can add your own blocks in one line.",
+    "thumb": "img/lounge/2-any-block-thumb.webp",
+    "og": "img/lounge/2-any-block.jpg"
    },
    {
-    "url": "img/lounge/3-lay-down.jpg",
+    "url": "img/lounge/3-lay-down.webp",
     "title": "Lie down anywhere",
-    "description": "`/lay` stretches you out in the grass as a mannequin wearing your own skin, armor and held items. No ProtocolLib, no fake players in the tab list."
+    "description": "`/lay` stretches you out in the grass as a mannequin wearing your own skin, armor and held items. No ProtocolLib, no fake players in the tab list.",
+    "thumb": "img/lounge/3-lay-down-thumb.webp",
+    "og": "img/lounge/3-lay-down.jpg"
    },
    {
-    "url": "img/lounge/4-crawl.jpg",
+    "url": "img/lounge/4-crawl.webp",
     "title": "Squeeze through",
-    "description": "`/crawl` puts you in the swimming pose on land, so you fit through 1-block gaps. Everyone sees it and your hitbox really shrinks."
+    "description": "`/crawl` puts you in the swimming pose on land, so you fit through 1-block gaps. Everyone sees it and your hitbox really shrinks.",
+    "thumb": "img/lounge/4-crawl-thumb.webp",
+    "og": "img/lounge/4-crawl.jpg"
    },
    {
-    "url": "img/lounge/5-ride-your-friends.jpg",
+    "url": "img/lounge/5-ride-your-friends.webp",
     "title": "Ride your friends",
-    "description": "Right-click a player to sit on their head. The one at the bottom sneaks to throw everyone off, and `/lounge toggle` opts you out."
+    "description": "Right-click a player to sit on their head. The one at the bottom sneaks to throw everyone off, and `/lounge toggle` opts you out.",
+    "thumb": "img/lounge/5-ride-your-friends-thumb.webp",
+    "og": "img/lounge/5-ride-your-friends.jpg"
    },
    {
-    "url": "img/lounge/6-made-to-fit.jpg",
+    "url": "img/lounge/6-made-to-fit.webp",
     "title": "Made to fit",
-    "description": "Lounge measures how your Minecraft version positions riders, so the body rests exactly on the step on 1.20 and on 26.x alike."
+    "description": "Lounge measures how your Minecraft version positions riders, so the body rests exactly on the step on 1.20 and on 26.x alike.",
+    "thumb": "img/lounge/6-made-to-fit-thumb.webp",
+    "og": "img/lounge/6-made-to-fit.jpg"
    }
   ]
  }

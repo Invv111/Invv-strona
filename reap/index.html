@@ -20,9 +20,7 @@
 <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Reap", "description": "Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.", "url": "https://invv111.github.io/Invv-strona/reap/", "image": "https://invv111.github.io/Invv-strona/img/reap/1-reap.jpg", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.20 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 </head>
@@ -33,21 +31,22 @@
     <img src="../img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
-  <nav aria-label="Main">
+  <nav id="nav" aria-label="Main">
     <a href="../#popular">Popular</a>
     <a href="../#next">Coming next</a>
     <a href="../#all">All plugins</a>
     <a href="https://modrinth.com/user/invv">Modrinth</a>
   </nav>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main id="page" data-static>
   <section class="p-hero" style="--glow:rgba(224, 176, 64, 0.35)">
-    <div class="bgimg" style="background-image:url('img/reap/1-reap.jpg')"></div>
+    <div class="bgimg" style="background-image:url('../img/reap/1-reap-thumb.webp')"></div>
     <div class="p-hero-inner">
       <p class="crumb"><a href="../">Home</a> / <a href="../#all">Server plugins</a> / Reap</p>
-      <img class="p-icon" src="../img/reap-logo.png" alt="" width="128" height="128">
+      <img class="p-icon" src="../img/reap-logo.webp" alt="" width="128" height="128">
       <div class="p-title"><h1>Reap</h1><p>Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.</p></div>
       <div class="p-actions"><a class="btn" href="https://discord.gg/E9hpUj3E6G">Get notified on Discord</a>
         <a class="btn btn-ghost" href="../#next">More coming soon</a></div>
@@ -59,10 +58,10 @@
     <div>
       <div class="gallery">
           <figure class="g-main" style="margin:0">
-            <img id="g-img" src="../img/reap/1-reap.jpg" alt="Reap">
+            <img id="g-img" src="../img/reap/1-reap.webp" alt="Reap" width="1400" height="788" decoding="async">
             <figcaption class="g-cap" id="g-cap"><b>Reap</b>A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting.</figcaption>
           </figure>
-          <div class="g-thumbs" role="list"><button type="button" data-i="0" aria-current="true" aria-label="Show screenshot 1: Reap"><img src="../img/reap/1-reap.jpg" alt="" loading="lazy"></button><button type="button" data-i="1" aria-current="false" aria-label="Show screenshot 2: The harvest wave"><img src="../img/reap/2-wave.jpg" alt="" loading="lazy"></button><button type="button" data-i="2" aria-current="false" aria-label="Show screenshot 3: Planted again, on the spot"><img src="../img/reap/3-replant.jpg" alt="" loading="lazy"></button><button type="button" data-i="3" aria-current="false" aria-label="Show screenshot 4: +36 crops"><img src="../img/reap/4-action-bar.jpg" alt="" loading="lazy"></button><button type="button" data-i="4" aria-current="false" aria-label="Show screenshot 5: Every crop"><img src="../img/reap/5-every-crop.jpg" alt="" loading="lazy"></button><button type="button" data-i="5" aria-current="false" aria-label="Show screenshot 6: Sugar cane, cactus and bamboo"><img src="../img/reap/6-sugar-cane.jpg" alt="" loading="lazy"></button><button type="button" data-i="6" aria-current="false" aria-label="Show screenshot 7: No more trampling"><img src="../img/reap/7-farmland.jpg" alt="" loading="lazy"></button><button type="button" data-i="7" aria-current="false" aria-label="Show screenshot 8: /reap stats and toggle"><img src="../img/reap/8-stats.jpg" alt="" loading="lazy"></button></div>
+          <div class="g-thumbs" role="list"><button type="button" data-i="0" aria-current="true" aria-label="Show screenshot 1: Reap"><img src="../img/reap/1-reap-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="1" aria-current="false" aria-label="Show screenshot 2: The harvest wave"><img src="../img/reap/2-wave-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="2" aria-current="false" aria-label="Show screenshot 3: Planted again, on the spot"><img src="../img/reap/3-replant-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="3" aria-current="false" aria-label="Show screenshot 4: +36 crops"><img src="../img/reap/4-action-bar-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="4" aria-current="false" aria-label="Show screenshot 5: Every crop"><img src="../img/reap/5-every-crop-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="5" aria-current="false" aria-label="Show screenshot 6: Sugar cane, cactus and bamboo"><img src="../img/reap/6-sugar-cane-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="6" aria-current="false" aria-label="Show screenshot 7: No more trampling"><img src="../img/reap/7-farmland-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="7" aria-current="false" aria-label="Show screenshot 8: /reap stats and toggle"><img src="../img/reap/8-stats-thumb.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button></div>
         </div>
       <article class="md"><div align="center">
 <h1>🌾 Reap</h1>
@@ -336,7 +335,7 @@ public void onHarvest(CropHarvestEvent event) {
   <p class="fine">Descriptions and download counts come from Modrinth. Not affiliated with Mojang or Microsoft.</p>
 </footer>
 
-<script id="page-data" type="application/json">{"slug": "reap", "local": true, "gallery": [{"url": "img/reap/1-reap.jpg", "title": "Reap", "description": "A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting."}, {"url": "img/reap/2-wave.jpg", "title": "The harvest wave", "description": "A netherite hoe sweeps a 7×7 square of wheat. The crops are cut ring by ring, spreading out from where you clicked."}, {"url": "img/reap/3-replant.jpg", "title": "Planted again, on the spot", "description": "Every harvested crop is replanted at once with a little sparkle. One seed comes out of the drops, so your inventory stays untouched."}, {"url": "img/reap/4-action-bar.jpg", "title": "+36 crops", "description": "The action bar sums up every harvest: how many crops were cut and what dropped. A Fortune III hoe brings in extra seeds and carrots."}, {"url": "img/reap/5-every-crop.jpg", "title": "Every crop", "description": "Wheat, carrots, potatoes, beetroots, nether wart, cocoa on the jungle tree, sugar cane and cactus. Everything on this farm is harvested with a right-click."}, {"url": "img/reap/6-sugar-cane.jpg", "title": "Sugar cane, cactus and bamboo", "description": "One swing of the hoe cuts every column in reach above the bottom block, so the whole row grows straight back."}, {"url": "img/reap/7-farmland.jpg", "title": "No more trampling", "description": "A cow, sheep and a pig dropped right onto bare farmland, and it stays farmland. Players can't trample it either."}, {"url": "img/reap/8-stats.jpg", "title": "/reap stats and toggle", "description": "Every player can see how many crops they have harvested and switch right-click harvesting off for themselves."}]}</script>
+<script id="page-data" type="application/json">{"slug": "reap", "local": true, "gallery": [{"url": "img/reap/1-reap.webp", "title": "Reap", "description": "A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting.", "thumb": "img/reap/1-reap-thumb.webp", "og": "img/reap/1-reap.jpg"}, {"url": "img/reap/2-wave.webp", "title": "The harvest wave", "description": "A netherite hoe sweeps a 7×7 square of wheat. The crops are cut ring by ring, spreading out from where you clicked.", "thumb": "img/reap/2-wave-thumb.webp", "og": "img/reap/2-wave.jpg"}, {"url": "img/reap/3-replant.webp", "title": "Planted again, on the spot", "description": "Every harvested crop is replanted at once with a little sparkle. One seed comes out of the drops, so your inventory stays untouched.", "thumb": "img/reap/3-replant-thumb.webp", "og": "img/reap/3-replant.jpg"}, {"url": "img/reap/4-action-bar.webp", "title": "+36 crops", "description": "The action bar sums up every harvest: how many crops were cut and what dropped. A Fortune III hoe brings in extra seeds and carrots.", "thumb": "img/reap/4-action-bar-thumb.webp", "og": "img/reap/4-action-bar.jpg"}, {"url": "img/reap/5-every-crop.webp", "title": "Every crop", "description": "Wheat, carrots, potatoes, beetroots, nether wart, cocoa on the jungle tree, sugar cane and cactus. Everything on this farm is harvested with a right-click.", "thumb": "img/reap/5-every-crop-thumb.webp", "og": "img/reap/5-every-crop.jpg"}, {"url": "img/reap/6-sugar-cane.webp", "title": "Sugar cane, cactus and bamboo", "description": "One swing of the hoe cuts every column in reach above the bottom block, so the whole row grows straight back.", "thumb": "img/reap/6-sugar-cane-thumb.webp", "og": "img/reap/6-sugar-cane.jpg"}, {"url": "img/reap/7-farmland.webp", "title": "No more trampling", "description": "A cow, sheep and a pig dropped right onto bare farmland, and it stays farmland. Players can't trample it either.", "thumb": "img/reap/7-farmland-thumb.webp", "og": "img/reap/7-farmland.jpg"}, {"url": "img/reap/8-stats.webp", "title": "/reap stats and toggle", "description": "Every player can see how many crops they have harvested and switch right-click harvesting off for themselves.", "thumb": "img/reap/8-stats-thumb.webp", "og": "img/reap/8-stats.jpg"}]}</script>
 <script src="../data.js" defer></script>
 <script src="../common.js" defer></script>
 <script src="../plugin.js" defer></script>

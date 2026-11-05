@@ -121,10 +121,36 @@ document.querySelectorAll(".show").forEach((el) => {
   el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="${ROOT}${slug}/">Read more</a>`);
 });
 
-loadProjects().then((list) => {
+// Draw at once from the data built into data.js, then quietly refresh from Modrinth.
+// Only the parts whose numbers changed are redrawn, so nothing jumps or restarts.
+const topSlugs = (list, n) => [...list].sort((a, b) => b.downloads - a.downloads).slice(0, n).map((p) => p.slug).join();
+const counts = (list) => list.map((p) => p.slug + ":" + p.downloads).sort().join();
+
+function show(list) {
   projects = list;
   renderHero();
   renderPodium();
   renderGrid();
   fillFooter(projects);
-});
+}
+
+if (typeof SNAPSHOT !== "undefined" && SNAPSHOT.length) show(SNAPSHOT);
+
+fetch(`${API}/user/${USER}/projects`)
+  .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+  .then((fresh) => {
+    if (!projects.length) return show(fresh);
+    if (counts(fresh) === counts(projects)) return;
+    const heroChanged = topSlugs(fresh, SPOTS.length) !== topSlugs(projects, SPOTS.length);
+    projects = fresh;
+    if (heroChanged) renderHero();
+    else {
+      const total = projects.reduce((s, p) => s + p.downloads, 0);
+      document.getElementById("s-projects").textContent = projects.length;
+      document.getElementById("s-downloads").textContent = short(total);
+    }
+    renderPodium();
+    if (!document.querySelector(".sort-menu:not([hidden])")) renderGrid();
+    fillFooter(projects);
+  })
+  .catch(() => { if (!projects.length) show([]); });

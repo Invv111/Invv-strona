@@ -7,7 +7,6 @@ on:
     paths-ignore:
       - "*/index.html"
       - "data.js"
-      - "projects.json"
       - "sitemap.xml"
   schedule:
     - cron: "17 4 * * *"

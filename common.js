@@ -87,3 +87,19 @@ function fillFooter(projects) {
   if (fp) fp.innerHTML = top.filter((p) => !isMod(p)).slice(0, 6).map(li).join("");
   if (fm) fm.innerHTML = top.filter(isMod).slice(0, 6).map(li).join("");
 }
+
+// phone menu
+(() => {
+  const top = document.querySelector(".top");
+  const btn = top?.querySelector(".menu-btn");
+  if (!btn) return;
+  const set = (open) => {
+    top.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.setAttribute("aria-label", open ? "Close menu" : "Menu");
+  };
+  btn.addEventListener("click", () => set(!top.classList.contains("open")));
+  top.querySelectorAll("nav a").forEach((a) => a.addEventListener("click", () => set(false)));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") set(false); });
+  document.addEventListener("click", (e) => { if (!top.contains(e.target)) set(false); });
+})();

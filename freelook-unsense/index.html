@@ -20,9 +20,7 @@
 <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Freelook", "description": "Freelook is a lightweight, client-side only Fabric mod for Minecraft 26.x that allows you to decouple your camera rotation from your player's body orientation.", "url": "https://invv111.github.io/Invv-strona/freelook-unsense/", "image": "https://cdn.modrinth.com/data/oSBxTuM4/images/0af0a7422bf8ef6264ef7be1ff829fa0fdaf82cf_350.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Fabric mod", "operatingSystem": "Minecraft 26.1 – 26.2 (Fabric)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/mod/freelook-unsense", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 561}, "softwareVersion": "1.0.0"}</script>
 </head>
@@ -33,13 +31,14 @@
     <img src="../img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
-  <nav aria-label="Main">
+  <nav id="nav" aria-label="Main">
     <a href="../#popular">Popular</a>
     <a href="../#next">Coming next</a>
     <a href="../#all">All plugins</a>
     <a href="https://modrinth.com/user/invv">Modrinth</a>
   </nav>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main id="page" data-static>
@@ -59,10 +58,10 @@
     <div>
       <div class="gallery">
           <figure class="g-main" style="margin:0">
-            <img id="g-img" src="https://cdn.modrinth.com/data/oSBxTuM4/images/0af0a7422bf8ef6264ef7be1ff829fa0fdaf82cf_350.webp" alt="settings">
+            <img id="g-img" src="https://cdn.modrinth.com/data/oSBxTuM4/images/0af0a7422bf8ef6264ef7be1ff829fa0fdaf82cf_350.webp" alt="settings" width="1400" height="788" decoding="async">
             <figcaption class="g-cap" id="g-cap"><b>settings</b></figcaption>
           </figure>
-          <div class="g-thumbs" role="list"><button type="button" data-i="0" aria-current="true" aria-label="Show screenshot 1: settings"><img src="https://cdn.modrinth.com/data/oSBxTuM4/images/0af0a7422bf8ef6264ef7be1ff829fa0fdaf82cf_350.webp" alt="" loading="lazy"></button><button type="button" data-i="1" aria-current="false" aria-label="Show screenshot 2"><img src="https://cdn.modrinth.com/data/oSBxTuM4/images/fe50f8d7f6b847318fde2910859940a1cdfa7cad_350.webp" alt="" loading="lazy"></button></div>
+          <div class="g-thumbs" role="list"><button type="button" data-i="0" aria-current="true" aria-label="Show screenshot 1: settings"><img src="https://cdn.modrinth.com/data/oSBxTuM4/images/0af0a7422bf8ef6264ef7be1ff829fa0fdaf82cf_350.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button><button type="button" data-i="1" aria-current="false" aria-label="Show screenshot 2"><img src="https://cdn.modrinth.com/data/oSBxTuM4/images/fe50f8d7f6b847318fde2910859940a1cdfa7cad_350.webp" alt="" width="160" height="90" loading="lazy" decoding="async"></button></div>
         </div>
       <article class="md"><h1>Freelook (Fabric, Client-Side Only)</h1>
 <p><strong>Freelook</strong> is a lightweight, client-side only Fabric mod for Minecraft 26.x that allows you to decouple your camera rotation from your player's body orientation. This lets you freely look and orbit the camera around your character while running, flying, or standing still, without changing the direction your player is facing or moving.</p>

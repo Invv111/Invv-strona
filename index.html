@@ -20,9 +20,7 @@
 <link rel="icon" href="img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,13 +30,14 @@
     <img src="img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
-  <nav aria-label="Main">
+  <nav id="nav" aria-label="Main">
     <a href="#popular">Popular</a>
     <a href="#next">Coming next</a>
     <a href="#all">All plugins</a>
     <a href="https://modrinth.com/user/invv">Modrinth</a>
   </nav>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main>
@@ -62,7 +61,7 @@
 
     <div class="hero-art" aria-hidden="true">
       <div class="plate">
-        <img src="img/elevate-1.jpg" alt="" width="1600" height="900">
+        <img src="img/elevate-1-800.webp" srcset="img/elevate-1-800.webp 800w, img/elevate-1-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 620px" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
       </div>
       <!-- plugin icons float around the plate, filled in by app.js -->
       <div class="floaters" id="floaters"></div>
@@ -87,9 +86,9 @@
 
     <div class="showcase">
       <article class="show show-elevate">
-        <div class="show-img"><img src="img/elevate-2.jpg" alt="Arriving on floor 3 of 6, the library, with the floor title on screen" loading="lazy" width="1600" height="900"></div>
+        <div class="show-img"><img src="img/elevate-2-800.webp" srcset="img/elevate-2-800.webp 800w, img/elevate-2-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 640px" decoding="async" alt="Arriving on floor 3 of 6, the library, with the floor title on screen" loading="lazy" width="1600" height="900"></div>
         <div class="show-body">
-          <h3><img src="img/elevate-logo.png" alt="" width="36" height="36">Elevate</h3>
+          <h3><img src="img/elevate-logo.webp" alt="" width="36" height="36">Elevate</h3>
           <p class="pitch">Jump to go up a floor, sneak to go down.</p>
           <ul>
             <li>16 craftable colors, from wool and an ender pearl</li>
@@ -100,9 +99,9 @@
       </article>
 
       <article class="show show-reap">
-        <div class="show-img"><img src="img/reap-2.jpg" alt="A netherite hoe reaping a 7 by 7 square of wheat, ring by ring" loading="lazy" width="1600" height="900"></div>
+        <div class="show-img"><img src="img/reap-2-800.webp" srcset="img/reap-2-800.webp 800w, img/reap-2-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 640px" decoding="async" alt="A netherite hoe reaping a 7 by 7 square of wheat, ring by ring" loading="lazy" width="1600" height="900"></div>
         <div class="show-body">
-          <h3><img src="img/reap-logo.png" alt="" width="36" height="36">Reap</h3>
+          <h3><img src="img/reap-logo.webp" alt="" width="36" height="36">Reap</h3>
           <p class="pitch">Right-click to harvest. Swing a hoe to reap the field.</p>
           <ul>
             <li>Auto-replant using a seed from the drops</li>
@@ -113,9 +112,9 @@
       </article>
 
       <article class="show show-lounge">
-        <div class="show-img"><img src="img/lounge-1.jpg" alt="Players sitting on stair benches around a campfire at sunset" loading="lazy" width="1600" height="900"></div>
+        <div class="show-img"><img src="img/lounge-1-800.webp" srcset="img/lounge-1-800.webp 800w, img/lounge-1-1400.webp 1400w" sizes="(max-width: 860px) 92vw, 640px" decoding="async" alt="Players sitting on stair benches around a campfire at sunset" loading="lazy" width="1600" height="900"></div>
         <div class="show-body">
-          <h3><img src="img/lounge-logo.png" alt="" width="36" height="36">Lounge</h3>
+          <h3><img src="img/lounge-logo.webp" alt="" width="36" height="36">Lounge</h3>
           <p class="pitch">Sit, lay and crawl anywhere.</p>
           <ul>
             <li>Sit on any stair, slab or carpet</li>

@@ -20,9 +20,7 @@
 <link rel="icon" href="../img/logo.svg" type="image/svg+xml">
 <link rel="icon" href="../img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Better Zoom", "description": "Better Zoom is a lightweight, ultra-smooth, and modern client-side mod for Minecraft 26+  built on the Fabric loader.", "url": "https://invv111.github.io/Invv-strona/better-vanilla-zoom/", "image": "https://cdn.modrinth.com/data/6IN875Nx/f4ef3a8748e43e139689559d9fd9ed9fe71b9131_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Fabric mod", "operatingSystem": "Minecraft 26.1 – 26.2 (Fabric)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/mod/better-vanilla-zoom", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 605}, "softwareVersion": "1.0.0"}</script>
 </head>
@@ -33,13 +31,14 @@
     <img src="../img/logo.svg" alt="" width="34" height="34">
     Invv
   </a>
-  <nav aria-label="Main">
+  <nav id="nav" aria-label="Main">
     <a href="../#popular">Popular</a>
     <a href="../#next">Coming next</a>
     <a href="../#all">All plugins</a>
     <a href="https://modrinth.com/user/invv">Modrinth</a>
   </nav>
   <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
 </header>
 
 <main id="page" data-static>

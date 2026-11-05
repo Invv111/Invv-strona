@@ -118,7 +118,7 @@ document.querySelectorAll(".show").forEach((el) => {
   const slug = [...el.classList].find((c) => c.startsWith("show-"))?.slice(5);
   if (!slug || !LOCAL[slug]) return;
   el.insertAdjacentHTML("afterbegin", `<span class="soon">Coming soon</span>`);
-  el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="plugin.html?p=${slug}">Read more</a>`);
+  el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="/${slug}/">Read more</a>`);
 });
 
 loadProjects().then((list) => {

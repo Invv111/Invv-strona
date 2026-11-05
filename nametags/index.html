@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nametags – Server plugin for Minecraft 1.20 – 26.3</title>
+<meta name="description" content="Nametags is a lightweight Minecraft plugin for Paper/Spigot 1.20.6+ designed to fully customize player displays.">
+<link rel="canonical" href="https://invv111.github.io/nametags/">
+<meta name="theme-color" content="#23201d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Invv – Minecraft plugins">
+<meta property="og:url" content="https://invv111.github.io/nametags/">
+<meta property="og:title" content="Nametags – Server plugin">
+<meta property="og:description" content="Nametags is a lightweight Minecraft plugin for Paper/Spigot 1.20.6+ designed to fully customize player displays.">
+<meta property="og:image" content="https://cdn.modrinth.com/data/9sFDgyaz/7f53ef9e2d9580ee489bbc12add85b53b49d0b78_96.webp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nametags – Server plugin">
+<meta name="twitter:description" content="Nametags is a lightweight Minecraft plugin for Paper/Spigot 1.20.6+ designed to fully customize player displays.">
+<meta name="twitter:image" content="https://cdn.modrinth.com/data/9sFDgyaz/7f53ef9e2d9580ee489bbc12add85b53b49d0b78_96.webp">
+<link rel="icon" href="https://cdn.modrinth.com/data/9sFDgyaz/7f53ef9e2d9580ee489bbc12add85b53b49d0b78_96.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Nametags", "description": "Nametags is a lightweight Minecraft plugin for Paper/Spigot 1.20.6+ designed to fully customize player displays.", "url": "https://invv111.github.io/nametags/", "image": "https://cdn.modrinth.com/data/9sFDgyaz/7f53ef9e2d9580ee489bbc12add85b53b49d0b78_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.20 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/nametags", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 1699}, "softwareVersion": "1.1.1"}</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="me" href="/">
+    <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+    Invv
+  </a>
+  <nav aria-label="Main">
+    <a href="/#popular">Popular</a>
+    <a href="/#next">Coming next</a>
+    <a href="/#all">All plugins</a>
+    <a href="https://modrinth.com/user/invv">Modrinth</a>
+  </nav>
+  <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+</header>
+
+<main id="page" data-static>
+  <section class="p-hero" style="--glow:rgba(35, 32, 29, 0.35)">
+    
+    <div class="p-hero-inner">
+      <p class="crumb"><a href="/">Home</a> / <a href="/#all">Server plugins</a> / Nametags</p>
+      <img class="p-icon" src="https://cdn.modrinth.com/data/9sFDgyaz/7f53ef9e2d9580ee489bbc12add85b53b49d0b78_96.webp" alt="" width="128" height="128">
+      <div class="p-title"><h1>Nametags</h1><p>Nametags is a lightweight Minecraft plugin for Paper/Spigot 1.20.6+ designed to fully customize player displays.</p></div>
+      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/nametags/version/7JpYGhl5">Download 1.1.1</a>
+        <a class="btn btn-ghost" href="https://modrinth.com/plugin/nametags">Open on Modrinth</a></div>
+      <div class="p-facts"><span class="chip"><b data-live="downloads">1,699</b> downloads</span><span class="chip"><b data-live="followers">1</b> followers</span><span class="chip">Minecraft <b>1.20 – 26.3</b></span><span class="chip">Paper, Folia, Spigot, Purpur</span><span class="chip">Updated <b>3 days ago</b></span></div>
+    </div>
+  </section>
+
+  <div class="p-body">
+    <div>
+      
+      <article class="md"><p>A robust and lightweight Minecraft plugin designed for Paper/Spigot 1.20.6+ (and newer) that lets you fully customize player nametags, chat formatting, tab lists, and health displays.</p>
+<h2>🌟 Overview</h2>
+<p>The plugin manages player <strong>prefixes, suffixes, nickname colors, and health subtitles</strong> across three areas:</p>
+<ol>
+<li><strong>Above player heads</strong> (3D scoreboard team nametags).</li>
+<li><strong>On the TAB list</strong> (player list).</li>
+<li><strong>On the Chat</strong> (the default <code>&lt;PlayerName&gt; Message</code> format is replaced with <code>Prefix Nickname Suffix: Message</code>, and colors are prevented from bleeding into the message text).</li>
+</ol>
+<hr />
+<h2>🛠️ Key Features</h2>
+<ol>
+<li>
+<p><strong>Gradients &amp; RGB Hex Support (1.16+):</strong></p>
+<ul>
+<li>Fully supports legacy color codes (e.g., <code>&amp;a</code>, <code>&amp;l</code>, <code>§c</code>).</li>
+<li>Supports custom Hex colors (e.g., <code>&amp;#FF5555</code>).</li>
+<li>Built-in multi-hex color interpolation for gradients (e.g., <code>&amp;#FF0000&amp;#00FF00Admin</code> smoothly transitions from red to green).</li>
+</ul>
+</li>
+<li>
+<p><strong>Smart Formatting &amp; Auto-Spacing:</strong></p>
+<ul>
+<li>Automatically adds a space after prefixes and before suffixes if missing, ensuring they never clash or stick to player names.</li>
+</ul>
+</li>
+<li>
+<p><strong>Native Nickname Coloration (<code>nickcolor</code>):</strong></p>
+<ul>
+<li>Uses Minecraft's native <code>team.color(...)</code> scoreboard field to change player name colors above heads and in the TAB list.</li>
+<li>Modifies chat name colors while cleanly resetting message colors afterwards to prevent color bleed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Health Display below Name (<code>subtitle</code>):</strong></p>
+<ul>
+<li>Enabled by default (shows <code>&lt;health&gt; HP</code> in red under player names in real-time).</li>
+<li>Health scores update exactly 1 tick after damage or healing events for accuracy.</li>
+<li>Simple per-player toggle using <code>on</code>/<code>off</code> options.</li>
+</ul>
+</li>
+<li>
+<p><strong>LuckPerms Integration:</strong></p>
+<ul>
+<li>Allows manual synchronization of prefix/suffix values from LuckPerms groups.</li>
+<li>Features a toggleable <strong>autosync</strong> scheduler that updates all online players' groups every 5 seconds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Persistent Data:</strong></p>
+<ul>
+<li>All player modifications (prefixes, suffixes, colors, and subtitle configurations) are stored in <code>data.yml</code> inside the plugin directory so they survive server restarts.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2>📋 Commands &amp; Permissions</h2>
+<p>Modify commands require the <code>nametags.use</code> permission. Admin commands (reload/autosync) require <code>nametags.admin</code> (defaults to OP).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; prefix &lt;text&gt;</code></td>
+<td style="text-align:left">Changes the player's prefix and notifies them in chat.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; silentprefix &lt;text&gt;</code></td>
+<td style="text-align:left">Changes the prefix silently (no message is sent to the target player).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; rgbprefix &lt;hex/gradient&gt;</code></td>
+<td style="text-align:left">Set a gradient prefix (e.g. <code>&amp;#FF0000&amp;#00FF00Owner</code>).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; suffix &lt;text&gt;</code></td>
+<td style="text-align:left">Changes the player's suffix and notifies them.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; silentsuffix &lt;text&gt;</code></td>
+<td style="text-align:left">Changes the suffix silently.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; rgbsuffix &lt;hex/gradient&gt;</code></td>
+<td style="text-align:left">Set a gradient suffix.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; nickcolor &lt;color&gt;</code></td>
+<td style="text-align:left">Sets nickname color (Options: <code>red</code>, <code>blue</code>, <code>green</code>, <code>gold</code>, <code>yellow</code>, <code>white</code>, <code>aqua</code>, etc.).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; subtitle &lt;on/off&gt;</code></td>
+<td style="text-align:left">Toggles the <code>&lt;health&gt; HP</code> display below the player's name.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; &lt;category&gt; reset</code></td>
+<td style="text-align:left">Resets the selected category (prefix, suffix, or nickcolor).</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag &lt;player&gt; luckperms-sync</code></td>
+<td style="text-align:left">Performs a one-time synchronization of prefix/suffix from LuckPerms.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag luckperms-autosync</code></td>
+<td style="text-align:left">Toggles the automatic 5-second LuckPerms synchronizer.</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/nametag reload</code> / <code>/nametags reload</code></td>
+<td style="text-align:left">Reloads the plugin configuration and applies updates to online players.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Full tab-completion support is included, suggesting online player names, subcommands, and English color names for the nickcolor command.</em></p>
+</article>
+    </div>
+    <aside class="side">
+      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.1.1</b><span>1.20 – 26.3 · 3 days ago</span></div><a href="https://modrinth.com/plugin/nametags/version/7JpYGhl5">Download</a></li><li><div><b>1.1</b><span>1.21 – 26.3 · 5 days ago</span></div><a href="https://modrinth.com/plugin/nametags/version/Lt1V1Ys7">Download</a></li><li><div><b>1.0</b><span>1.20.6 – 26.2 · 4 months ago</span></div><a href="https://modrinth.com/plugin/nametags/version/tRd6yLEg">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/nametags/versions">All versions on Modrinth</a></p></div>
+      <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://modrinth.com/plugin/nametags">Modrinth page</a></li><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
+    </aside>
+  </div>
+
+  <section class="others">
+    <div class="block-head center"><h2>More plugins</h2></div>
+    <ul class="grid"><li class="card"><a href="/antyxray/" style="--glow:rgba(65, 28, 17, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
+    <p>A Simple Antyxray plugin for your server</p>
+    <span class="meta"><span><b>80,177</b> downloads</span><span>1.20 – 26.3</span></span>
+  </a></li><li class="card"><a href="/tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
+    <p>A Simple plugin for teleport on your server</p>
+    <span class="meta"><span><b>33,111</b> downloads</span><span>1.18 – 26.3</span></span>
+  </a></li><li class="card"><a href="/musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
+    <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
+    <span class="meta"><span><b>15,460</b> downloads</span><span>1.21.4 – 26.2</span></span>
+  </a></li><li class="card"><a href="/set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
+    <p>A simple plugin for spawn in your world</p>
+    <span class="meta"><span><b>9,388</b> downloads</span><span>1.19 – 26.3</span></span>
+  </a></li></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-about">
+      <a class="me" href="/"><img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">Invv</a>
+      <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
+      <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+    </div>
+    <div><h4>Server plugins</h4><ul id="foot-plugins"><li><a href="/antyxray/">Antixray</a></li><li><a href="/tpaa/">Tpa</a></li><li><a href="/set.spawn/">SetSpawn</a></li><li><a href="/seeinventory/">InventorySee</a></li><li><a href="/homess/">SetHome</a></li><li><a href="/drop.heads/">PlayerHeadDrop</a></li></ul></div>
+    <div><h4>Fabric mods</h4><ul id="foot-mods"><li><a href="/musicdisplay/">MusicDisplay</a></li><li><a href="/better-vanilla-zoom/">Better Zoom</a></li><li><a href="/freelook-unsense/">Freelook</a></li></ul></div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://modrinth.com/user/invv">Modrinth profile</a></li>
+        <li><a href="https://discord.gg/E9hpUj3E6G">Discord</a></li>
+        <li><a href="https://github.com/Invv111">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">Descriptions and download counts come from Modrinth. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script id="page-data" type="application/json">{"slug": "nametags", "local": false, "gallery": []}</script>
+<script src="/data.js" defer></script>
+<script src="/common.js" defer></script>
+<script src="/plugin.js" defer></script>
+</body>
+</html>

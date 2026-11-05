@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TabPlugin – Server plugin for Minecraft 1.21 – 1.21.9</title>
+<meta name="description" content="TabPlugin displays player ping in milliseconds on the tab list with color-coding (green/yellow/orange/red) and automatically marks players as AFK after 5 minutes of inactivity.">
+<link rel="canonical" href="https://invv111.github.io/tabplugin/">
+<meta name="theme-color" content="#322b20">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Invv – Minecraft plugins">
+<meta property="og:url" content="https://invv111.github.io/tabplugin/">
+<meta property="og:title" content="TabPlugin – Server plugin">
+<meta property="og:description" content="TabPlugin displays player ping in milliseconds on the tab list with color-coding (green/yellow/orange/red) and automatically marks players as AFK after 5 minutes of inactivity.">
+<meta property="og:image" content="https://cdn.modrinth.com/data/8RD1hmA5/03165b5e38e72bb58cb314e3a8ccb46321dd5c6e_96.webp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TabPlugin – Server plugin">
+<meta name="twitter:description" content="TabPlugin displays player ping in milliseconds on the tab list with color-coding (green/yellow/orange/red) and automatically marks players as AFK after 5 minutes of inactivity.">
+<meta name="twitter:image" content="https://cdn.modrinth.com/data/8RD1hmA5/03165b5e38e72bb58cb314e3a8ccb46321dd5c6e_96.webp">
+<link rel="icon" href="https://cdn.modrinth.com/data/8RD1hmA5/03165b5e38e72bb58cb314e3a8ccb46321dd5c6e_96.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TabPlugin", "description": "TabPlugin displays player ping in milliseconds on the tab list with color-coding (green/yellow/orange/red) and automatically marks players as AFK after 5 minutes of inactivity.", "url": "https://invv111.github.io/tabplugin/", "image": "https://cdn.modrinth.com/data/8RD1hmA5/03165b5e38e72bb58cb314e3a8ccb46321dd5c6e_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 1.21.9 (Paper, Spigot)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/tabplugin", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 913}, "softwareVersion": "1.0"}</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="me" href="/">
+    <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+    Invv
+  </a>
+  <nav aria-label="Main">
+    <a href="/#popular">Popular</a>
+    <a href="/#next">Coming next</a>
+    <a href="/#all">All plugins</a>
+    <a href="https://modrinth.com/user/invv">Modrinth</a>
+  </nav>
+  <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+</header>
+
+<main id="page" data-static>
+  <section class="p-hero" style="--glow:rgba(50, 43, 32, 0.35)">
+    
+    <div class="p-hero-inner">
+      <p class="crumb"><a href="/">Home</a> / <a href="/#all">Server plugins</a> / TabPlugin</p>
+      <img class="p-icon" src="https://cdn.modrinth.com/data/8RD1hmA5/03165b5e38e72bb58cb314e3a8ccb46321dd5c6e_96.webp" alt="" width="128" height="128">
+      <div class="p-title"><h1>TabPlugin</h1><p>TabPlugin displays player ping in milliseconds on the tab list with color-coding (green/yellow/orange/red) and automatically marks players as AFK after 5 minutes of inactivity.</p></div>
+      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/tabplugin/version/9AnAaopA">Download 1.0</a>
+        <a class="btn btn-ghost" href="https://modrinth.com/plugin/tabplugin">Open on Modrinth</a></div>
+      <div class="p-facts"><span class="chip"><b data-live="downloads">913</b> downloads</span><span class="chip"><b data-live="followers">2</b> followers</span><span class="chip">Minecraft <b>1.21 – 1.21.9</b></span><span class="chip">Paper, Spigot</span><span class="chip">Updated <b>10 months ago</b></span></div>
+    </div>
+  </section>
+
+  <div class="p-body">
+    <div>
+      
+      <article class="md"><p><strong>[⚠️]NOTE!</strong> If u have aby issue with the plugin please report to in our discord!</p>
+<p><strong>TabPing Plugin Description 🎮</strong>
+<strong>Main Function:</strong>
+The plugin displays player ping ⚡ in milliseconds next to their nickname on the tab list (when you press Tab key). Additionally, it monitors player activity and marks inactive players as AFK 💤.</p>
+<p><strong>How the ping system works: 📊</strong></p>
+<p>Updates every second ⏱️: The plugin checks each player's ping on the server every 1 second (20 Minecraft ticks)
+<strong>Color coding by speed 🌈:</strong></p>
+<ul>
+<li>Green 🟢 &lt; 50ms - excellent ping</li>
+<li>Yellow 🟡 50-100ms - good ping</li>
+<li>Orange (GOLD) 🟠 100-150ms - medium ping</li>
+<li>Red 🔴 &gt; 150ms - poor ping</li>
+</ul>
+<p>Display format: PlayerName [45ms]</p>
+<p>Nickname is white ⚪
+Ping is colored 🎨 (depends on value)
+Brackets are dark gray</p>
+<p><strong>How the AFK system works: 😴</strong></p>
+<p><strong>Activity tracking 👀:</strong></p>
+<p>Plugin saves timestamp of each player's last movement
+Listens to PlayerMoveEvent - reacts when player moves 🏃</p>
+<p><strong>Movement detection 🎯:</strong></p>
+<p>Plugin checks if player actually moved (X, Y, Z coordinate change)
+Just rotating camera 🔄 does NOT reset AFK timer
+Every real movement 🚶 resets the timer</p>
+<p><strong>AFK checking ⏲️:</strong></p>
+<p>Every second the plugin checks all players
+If player hasn't moved for 5 minutes ⏰ (300 seconds) - gets AFK status
+Format: PlayerName [120ms] [AFK] 💤</p>
+<p><strong>Returning from AFK ✅:</strong></p>
+<p>When AFK player moves - immediately loses AFK marker
+Ping is automatically updated 🔄</p>
+<p><strong>Configuration system (config.yml): ⚙️</strong>
+You can customize everything:
+yamlafk:
+time-seconds: 300    # Change to 60 = 1 minute, 600 = 10 minutes etc. ⏱️
+text: &quot;AFK&quot;          # Can change to &quot;AWAY&quot; or &quot;INACTIVE&quot; 📝
+color: &quot;GRAY&quot;        # Color of AFK text 🎨</p>
+<p>ping:
+thresholds:
+good: 50           # Good ping threshold ✅
+medium: 100        # Medium ping threshold ⚠️
+bad: 150           # Bad ping threshold ❌</p>
+<p>colors:
+good: &quot;GREEN&quot;      # Color for &lt;50ms 🟢
+medium: &quot;YELLOW&quot;   # Color for 50-100ms 🟡
+bad: &quot;GOLD&quot;        # Color for 100-150ms 🟠
+very-bad: &quot;RED&quot;    # Color for &gt;150ms 🔴</p>
+<p><strong>Commands: 💬:</strong></p>
+<ul>
+<li>/tabping - Forces immediate update + shows player info in chat 🔄</li>
+<li>/tabping reload - Reloads config.yml without server restart ♻️</li>
+<li>/tabping toggle - Disables/enables plugin temporarily 🔌</li>
+</ul>
+<p><strong>How the plugin handles AuthSystem: 🔐</strong></p>
+<p>When player joins, plugin waits 5 seconds ⏳ before setting ping
+This gives time to log in through AuthSystem 🔑
+After logging in, ping appears automatically ✨</p>
+<p>Technically - what happens behind the scenes: 🔧</p>
+<p>Memory 💾: Plugin stores in HashMaps:</p>
+<p>lastActivity - last activity time of each ****player (UUID → timestamp)
+afkPlayers - AFK status of each player (UUID → true/false)</p>
+<p><strong>Events 📡:</strong></p>
+<p>PlayerJoinEvent - initializes player (resets AFK, sets activity time) 👋
+PlayerQuitEvent - removes player from memory 👋
+PlayerMoveEvent - updates activity time 🏃</p>
+<p><strong>Timers ⏲️ (BukkitRunnable):</strong></p>
+<p>Timer #1: Every second checks and marks AFK players 😴
+Timer #2: Every second updates ping for all players ⚡</p>
+<p>Adventure API 🎨: Uses modern text component system for coloring</p>
+<p><strong>Example scenarios: 📝</strong>
+<strong>Scenario 1: Normal player ✅</strong></p>
+<p>Player &quot;Invvl&quot; joins, logs in 🔑 → waits 5s ⏳ → displays Invvl [35ms] (green 🟢)
+Player actively plays 🎮, ping updates every second</p>
+<p><strong>Scenario 2: Player leaves computer 💤</strong></p>
+<p>After 5 minutes without movement → Invvl [40ms] [AFK] (AFK gray)
+Returns, moves 🏃 → immediately Invvl [42ms] (AFK disappears ✨)</p>
+<p>Scenario 3: Bad internet 📶</p>
+<p>Ping jumps: 80ms → Invvl [80ms] (yellow 🟡)
+Lagspike 📉: 200ms → Invvl [200ms] (red 🔴)
+Stabilizes 📈: 60ms → Invvl [60ms] (yellow 🟡)</p>
+<p>The plugin is lightweight 🪶 (only checks movement and ping), configurable ⚙️ (everything in config.yml) and automatic 🤖 (requires no player interaction).</p>
+<p><strong>Perfect for: 🎯</strong></p>
+<p>✅ Survival servers
+✅ PvP servers (important ping info!)
+✅ Minigame servers
+✅ Community servers with AFK management</p>
+<p>Enjoy your optimized tab list! 🚀✨</p>
+</article>
+    </div>
+    <aside class="side">
+      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/tabplugin/version/9AnAaopA">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/tabplugin/versions">All versions on Modrinth</a></p></div>
+      <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://modrinth.com/plugin/tabplugin">Modrinth page</a></li><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
+    </aside>
+  </div>
+
+  <section class="others">
+    <div class="block-head center"><h2>More plugins</h2></div>
+    <ul class="grid"><li class="card"><a href="/antyxray/" style="--glow:rgba(65, 28, 17, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
+    <p>A Simple Antyxray plugin for your server</p>
+    <span class="meta"><span><b>80,177</b> downloads</span><span>1.20 – 26.3</span></span>
+  </a></li><li class="card"><a href="/tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
+    <p>A Simple plugin for teleport on your server</p>
+    <span class="meta"><span><b>33,111</b> downloads</span><span>1.18 – 26.3</span></span>
+  </a></li><li class="card"><a href="/musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
+    <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
+    <span class="meta"><span><b>15,460</b> downloads</span><span>1.21.4 – 26.2</span></span>
+  </a></li><li class="card"><a href="/set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
+    <p>A simple plugin for spawn in your world</p>
+    <span class="meta"><span><b>9,388</b> downloads</span><span>1.19 – 26.3</span></span>
+  </a></li></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-about">
+      <a class="me" href="/"><img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">Invv</a>
+      <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
+      <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+    </div>
+    <div><h4>Server plugins</h4><ul id="foot-plugins"><li><a href="/antyxray/">Antixray</a></li><li><a href="/tpaa/">Tpa</a></li><li><a href="/set.spawn/">SetSpawn</a></li><li><a href="/seeinventory/">InventorySee</a></li><li><a href="/homess/">SetHome</a></li><li><a href="/drop.heads/">PlayerHeadDrop</a></li></ul></div>
+    <div><h4>Fabric mods</h4><ul id="foot-mods"><li><a href="/musicdisplay/">MusicDisplay</a></li><li><a href="/better-vanilla-zoom/">Better Zoom</a></li><li><a href="/freelook-unsense/">Freelook</a></li></ul></div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://modrinth.com/user/invv">Modrinth profile</a></li>
+        <li><a href="https://discord.gg/E9hpUj3E6G">Discord</a></li>
+        <li><a href="https://github.com/Invv111">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">Descriptions and download counts come from Modrinth. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script id="page-data" type="application/json">{"slug": "tabplugin", "local": false, "gallery": []}</script>
+<script src="/data.js" defer></script>
+<script src="/common.js" defer></script>
+<script src="/plugin.js" defer></script>
+</body>
+</html>

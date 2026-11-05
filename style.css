@@ -349,6 +349,9 @@ input[type="search"] { width: 220px; }
 .vers b { display: block; font-size: 15px; }
 .vers span { color: var(--muted); }
 .vers a { color: var(--torch); font-weight: 700; white-space: nowrap; align-self: center; }
+.box-note { margin: 0; color: var(--muted); font-size: 15px; }
+.box-more { margin: 14px 0 0; font-size: 14px; }
+.box-more a { color: var(--muted); }
 .links { list-style: none; margin: 0; padding: 0; font-size: 15px; }
 .links li { margin: 6px 0; }
 .links a { color: var(--muted); }

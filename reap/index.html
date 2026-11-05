@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reap – Server plugin for Minecraft 1.20 – 26.3</title>
+<meta name="description" content="Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.">
+<link rel="canonical" href="https://invv111.github.io/reap/">
+<meta name="theme-color" content="#e0b040">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Invv – Minecraft plugins">
+<meta property="og:url" content="https://invv111.github.io/reap/">
+<meta property="og:title" content="Reap – Server plugin">
+<meta property="og:description" content="Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.">
+<meta property="og:image" content="https://invv111.github.io/img/reap/1-reap.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reap – Server plugin">
+<meta name="twitter:description" content="Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.">
+<meta name="twitter:image" content="https://invv111.github.io/img/reap/1-reap.jpg">
+<link rel="icon" href="/img/reap-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Reap", "description": "Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.", "url": "https://invv111.github.io/reap/", "image": "https://invv111.github.io/img/reap/1-reap.jpg", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.20 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="me" href="/">
+    <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+    Invv
+  </a>
+  <nav aria-label="Main">
+    <a href="/#popular">Popular</a>
+    <a href="/#next">Coming next</a>
+    <a href="/#all">All plugins</a>
+    <a href="https://modrinth.com/user/invv">Modrinth</a>
+  </nav>
+  <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+</header>
+
+<main id="page" data-static>
+  <section class="p-hero" style="--glow:rgba(224, 176, 64, 0.35)">
+    <div class="bgimg" style="background-image:url('/img/reap/1-reap.jpg')"></div>
+    <div class="p-hero-inner">
+      <p class="crumb"><a href="/">Home</a> / <a href="/#all">Server plugins</a> / Reap</p>
+      <img class="p-icon" src="/img/reap-logo.png" alt="" width="128" height="128">
+      <div class="p-title"><h1>Reap</h1><p>Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.</p></div>
+      <div class="p-actions"><a class="btn" href="https://discord.gg/E9hpUj3E6G">Get notified on Discord</a>
+        <a class="btn btn-ghost" href="/#next">More coming soon</a></div>
+      <div class="p-facts"><span class="chip"><b>Coming soon</b></span><span class="chip">Minecraft <b>1.20 – 26.3</b></span><span class="chip">Paper, Folia, Spigot, Purpur</span></div>
+    </div>
+  </section>
+
+  <div class="p-body">
+    <div>
+      <div class="gallery">
+          <figure class="g-main" style="margin:0">
+            <img id="g-img" src="/img/reap/1-reap.jpg" alt="Reap">
+            <figcaption class="g-cap" id="g-cap"><b>Reap</b>A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting.</figcaption>
+          </figure>
+          <div class="g-thumbs" role="list"><button type="button" data-i="0" aria-current="true" aria-label="Show screenshot 1: Reap"><img src="/img/reap/1-reap.jpg" alt="" loading="lazy"></button><button type="button" data-i="1" aria-current="false" aria-label="Show screenshot 2: The harvest wave"><img src="/img/reap/2-wave.jpg" alt="" loading="lazy"></button><button type="button" data-i="2" aria-current="false" aria-label="Show screenshot 3: Planted again, on the spot"><img src="/img/reap/3-replant.jpg" alt="" loading="lazy"></button><button type="button" data-i="3" aria-current="false" aria-label="Show screenshot 4: +36 crops"><img src="/img/reap/4-action-bar.jpg" alt="" loading="lazy"></button><button type="button" data-i="4" aria-current="false" aria-label="Show screenshot 5: Every crop"><img src="/img/reap/5-every-crop.jpg" alt="" loading="lazy"></button><button type="button" data-i="5" aria-current="false" aria-label="Show screenshot 6: Sugar cane, cactus and bamboo"><img src="/img/reap/6-sugar-cane.jpg" alt="" loading="lazy"></button><button type="button" data-i="6" aria-current="false" aria-label="Show screenshot 7: No more trampling"><img src="/img/reap/7-farmland.jpg" alt="" loading="lazy"></button><button type="button" data-i="7" aria-current="false" aria-label="Show screenshot 8: /reap stats and toggle"><img src="/img/reap/8-stats.jpg" alt="" loading="lazy"></button></div>
+        </div>
+      <article class="md"><div align="center">
+<h1>🌾 Reap</h1>
+<p><strong>Farming without the busywork. Right-click a grown crop and it's harvested and planted again. Swing a better hoe and the whole field around you is reaped in one sweeping wave.</strong></p>
+<p>No more breaking, picking up and replanting crop by crop, and no more fields full of holes.
+Server-side only. <strong>No resource pack, no mods, no dependencies.</strong> Bukkit, Spigot, Paper, Purpur and Folia, <strong>1.20 → 26.x</strong>.</p>
+</div>
+<hr />
+<h2>✨ Features</h2>
+<h3>🖱️ Right-click harvesting</h3>
+<ul>
+<li><strong>Right-click a fully grown crop</strong> to harvest it. The drops pop out and the crop is <strong>replanted on the spot</strong>.</li>
+<li>Works on <strong>wheat, carrots, potatoes, beetroots, nether wart and cocoa</strong>. Cocoa stays on its side of the jungle log.</li>
+<li><strong>One seed is taken from the drops</strong> for the replant, so you never lose seeds from your inventory.</li>
+<li>Unripe crops are left alone, so a misclick can't ruin a fresh field.</li>
+<li><strong>Fortune works.</strong> A Fortune III hoe gives the same extra drops as breaking crops by hand.</li>
+</ul>
+<h3>🌊 Hoes reap a whole area, in a wave</h3>
+<ul>
+<li>With a hoe in hand, every grown crop around the one you click is harvested too, <strong>spreading out ring by ring</strong> like a wave through the field.</li>
+<li><strong>Better hoe, bigger area.</strong> By default: stone/iron/copper 3×3, gold/diamond 5×5, netherite <strong>7×7</strong>. Each tier is configurable, with an optional Efficiency bonus.</li>
+<li>Works on slopes and terraces: crops a block above or below are included.</li>
+<li><strong>Sneak</strong> to harvest just one crop.</li>
+<li>The hoe loses <strong>1 durability per swing, not per crop</strong>, and Unbreaking is respected.</li>
+</ul>
+<h3>🎋 Sugar cane, cactus and bamboo</h3>
+<ul>
+<li>Right-click any part of a column and everything <strong>above the bottom block</strong> is cut, so it <strong>grows back on its own</strong>.</li>
+<li>Hoes cut every grown column in their area too.</li>
+</ul>
+<h3>🛡️ Farmland that stays farmland</h3>
+<ul>
+<li><strong>No more trampling.</strong> Jumping players and wandering mobs can't turn your farmland back into dirt.</li>
+<li>Players and mobs can be set separately. <code>reap.trample.bypass</code> lets chosen players trample anyway.</li>
+</ul>
+<h3>✨ Feels good to use</h3>
+<ul>
+<li>A crunchy crop sound with a little pitch variation, block crumbs, and green sparkles where a crop is replanted.</li>
+<li>An <strong>action bar summary</strong> after every harvest: <code>+24 crops · Wheat ×31, Wheat Seeds ×12</code>.</li>
+<li>Optional <strong>auto-pickup</strong> (drops go straight into your inventory) and optional <strong>XP</strong> per crop.</li>
+<li><code>/reap stats</code> counts every crop you've ever harvested.</li>
+<li><code>/reap toggle</code> lets each player turn it off for themselves. The setting is kept across restarts.</li>
+</ul>
+<h3>🤝 Plays nicely with other plugins</h3>
+<ul>
+<li><strong>Protection plugins are respected.</strong> WorldGuard, GriefPrevention, Lands, Towny, Residence and friends are asked first, so nobody can harvest a field they can't build in.</li>
+<li>Every harvested crop counts as a broken block, so <strong>Jobs, quests, logs (CoreProtect) and McMMO-style plugins</strong> keep working.</li>
+<li><strong>Folia native</strong>, with the wave running on the region that owns the field.</li>
+<li>Per-world: whitelist or blacklist worlds.</li>
+</ul>
+<hr />
+<h2>⌨️ Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/reap</code></td>
+<td>Help</td>
+<td>—</td>
+</tr>
+<tr>
+<td><code>/reap toggle</code></td>
+<td>Turn right-click harvesting on or off for yourself</td>
+<td><code>reap.toggle</code></td>
+</tr>
+<tr>
+<td><code>/reap stats [player]</code></td>
+<td>How many crops you (or someone else) have harvested</td>
+<td><code>reap.stats</code></td>
+</tr>
+<tr>
+<td><code>/reap reload</code></td>
+<td>Reload config and messages</td>
+<td><code>reap.admin</code></td>
+</tr>
+</tbody>
+</table>
+<p>Alias: <code>/harvest</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Default</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reap.use</code></td>
+<td>everyone</td>
+<td>Right-click harvesting</td>
+</tr>
+<tr>
+<td><code>reap.area</code></td>
+<td>everyone</td>
+<td>Hoes harvest an area</td>
+</tr>
+<tr>
+<td><code>reap.trample.bypass</code></td>
+<td>nobody</td>
+<td>Can trample farmland anyway</td>
+</tr>
+<tr>
+<td><code>reap.admin</code></td>
+<td>op</td>
+<td>Reload, other players' stats</td>
+</tr>
+<tr>
+<td><code>reap.notify</code></td>
+<td>op</td>
+<td>Update notices</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>⚙️ Configuration</h2>
+<pre><code class="language-yaml">harvest:
+  right-click: true
+  require-hoe: false        # true = only hoes harvest
+  replant: true
+  auto-pickup: false
+  experience: 0.0           # XP orbs per crop
+  respect-protection: true
+
+area:
+  enabled: true
+  radius:                   # 1 = 3x3, 2 = 5x5, 3 = 7x7
+    wooden: 0
+    stone: 1
+    copper: 1
+    iron: 1
+    golden: 2
+    diamond: 2
+    netherite: 3
+  efficiency-bonus: 0
+  height: 1
+  sneak-for-single: true
+  wave-ticks: 1             # 0 = everything at once
+  durability: 1             # per swing, not per crop
+
+farmland:
+  protect-from-players: true
+  protect-from-mobs: true
+</code></pre>
+<p>Every message supports <strong>color codes and hex colors</strong> (<code>&amp;#e8b84a</code>). <strong>English and Polish</strong> are included, and you can add your own <code>lang/&lt;name&gt;.yml</code>. <code>/reap reload</code> applies everything live.</p>
+<hr />
+<h2>🔌 PlaceholderAPI</h2>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%reap_harvested%</code></td>
+<td>Crops the player has harvested</td>
+</tr>
+<tr>
+<td><code>%reap_enabled%</code></td>
+<td><code>true</code> when the player has right-click harvesting on</td>
+</tr>
+</tbody>
+</table>
+<h2>🧑‍💻 For developers</h2>
+<p><code>CropHarvestEvent</code> (cancellable) fires for every crop, after protection plugins have agreed. Change the drops, stop the replant or cancel it.</p>
+<pre><code class="language-java">@EventHandler
+public void onHarvest(CropHarvestEvent event) {
+    if (event.getBlock().getType() == Material.WHEAT) {
+        event.getDrops().add(new ItemStack(Material.BREAD));
+    }
+}
+</code></pre>
+<hr />
+<h2>📦 Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Servers</strong></td>
+<td>Bukkit, Spigot, Paper, Purpur, Folia and their forks</td>
+</tr>
+<tr>
+<td><strong>Versions</strong></td>
+<td>1.20 → 26.x</td>
+</tr>
+<tr>
+<td><strong>Java</strong></td>
+<td>17+ (21+ for 1.20.5 and newer, as Minecraft itself requires)</td>
+</tr>
+<tr>
+<td><strong>Dependencies</strong></td>
+<td>None. PlaceholderAPI optional</td>
+</tr>
+<tr>
+<td><strong>Clients</strong></td>
+<td>Vanilla. Nothing to install</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div align="center">
+<h3>🐞 Found a bug or have an idea?</h3>
+<p><strong>Report it on our <a href="https://discord.gg/E9hpUj3E6G">Discord</a>.</strong> That is the only place bug reports are handled, so please don't use other channels.</p>
+<p>Made by <strong>Invv</strong> · <a href="https://modrinth.com/user/invv">More plugins</a> · <a href="https://discord.gg/E9hpUj3E6G">Discord</a></p>
+</div>
+</article>
+    </div>
+    <aside class="side">
+      <div class="box"><h2>Release</h2><p class="box-note">Not released yet. Join the Discord to hear when it's out.</p></div>
+      <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
+    </aside>
+  </div>
+
+  <section class="others">
+    <div class="block-head center"><h2>More plugins</h2></div>
+    <ul class="grid"><li class="card"><a href="/antyxray/" style="--glow:rgba(65, 28, 17, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
+    <p>A Simple Antyxray plugin for your server</p>
+    <span class="meta"><span><b>80,177</b> downloads</span><span>1.20 – 26.3</span></span>
+  </a></li><li class="card"><a href="/tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
+    <p>A Simple plugin for teleport on your server</p>
+    <span class="meta"><span><b>33,111</b> downloads</span><span>1.18 – 26.3</span></span>
+  </a></li><li class="card"><a href="/musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
+    <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
+    <span class="meta"><span><b>15,460</b> downloads</span><span>1.21.4 – 26.2</span></span>
+  </a></li><li class="card"><a href="/set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
+    <p>A simple plugin for spawn in your world</p>
+    <span class="meta"><span><b>9,388</b> downloads</span><span>1.19 – 26.3</span></span>
+  </a></li></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-about">
+      <a class="me" href="/"><img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">Invv</a>
+      <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
+      <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+    </div>
+    <div><h4>Server plugins</h4><ul id="foot-plugins"><li><a href="/antyxray/">Antixray</a></li><li><a href="/tpaa/">Tpa</a></li><li><a href="/set.spawn/">SetSpawn</a></li><li><a href="/seeinventory/">InventorySee</a></li><li><a href="/homess/">SetHome</a></li><li><a href="/drop.heads/">PlayerHeadDrop</a></li></ul></div>
+    <div><h4>Fabric mods</h4><ul id="foot-mods"><li><a href="/musicdisplay/">MusicDisplay</a></li><li><a href="/better-vanilla-zoom/">Better Zoom</a></li><li><a href="/freelook-unsense/">Freelook</a></li></ul></div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://modrinth.com/user/invv">Modrinth profile</a></li>
+        <li><a href="https://discord.gg/E9hpUj3E6G">Discord</a></li>
+        <li><a href="https://github.com/Invv111">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">Descriptions and download counts come from Modrinth. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script id="page-data" type="application/json">{"slug": "reap", "local": true, "gallery": [{"url": "/img/reap/1-reap.jpg", "title": "Reap", "description": "A golden wheat field at sunset, half harvested and replanted in neat rows. One right-click instead of breaking, collecting and replanting."}, {"url": "/img/reap/2-wave.jpg", "title": "The harvest wave", "description": "A netherite hoe sweeps a 7×7 square of wheat. The crops are cut ring by ring, spreading out from where you clicked."}, {"url": "/img/reap/3-replant.jpg", "title": "Planted again, on the spot", "description": "Every harvested crop is replanted at once with a little sparkle. One seed comes out of the drops, so your inventory stays untouched."}, {"url": "/img/reap/4-action-bar.jpg", "title": "+36 crops", "description": "The action bar sums up every harvest: how many crops were cut and what dropped. A Fortune III hoe brings in extra seeds and carrots."}, {"url": "/img/reap/5-every-crop.jpg", "title": "Every crop", "description": "Wheat, carrots, potatoes, beetroots, nether wart, cocoa on the jungle tree, sugar cane and cactus. Everything on this farm is harvested with a right-click."}, {"url": "/img/reap/6-sugar-cane.jpg", "title": "Sugar cane, cactus and bamboo", "description": "One swing of the hoe cuts every column in reach above the bottom block, so the whole row grows straight back."}, {"url": "/img/reap/7-farmland.jpg", "title": "No more trampling", "description": "A cow, sheep and a pig dropped right onto bare farmland, and it stays farmland. Players can't trample it either."}, {"url": "/img/reap/8-stats.jpg", "title": "/reap stats and toggle", "description": "Every player can see how many crops they have harvested and switch right-click harvesting off for themselves."}]}</script>
+<script src="/data.js" defer></script>
+<script src="/common.js" defer></script>
+<script src="/plugin.js" defer></script>
+</body>
+</html>

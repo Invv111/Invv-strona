@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SetHome – Server plugin for Minecraft 1.19 – 1.21.9</title>
+<meta name="description" content="A plugin that adds homes to your world!">
+<link rel="canonical" href="https://invv111.github.io/homess/">
+<meta name="theme-color" content="#d3ba90">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Invv – Minecraft plugins">
+<meta property="og:url" content="https://invv111.github.io/homess/">
+<meta property="og:title" content="SetHome – Server plugin">
+<meta property="og:description" content="A plugin that adds homes to your world!">
+<meta property="og:image" content="https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SetHome – Server plugin">
+<meta name="twitter:description" content="A plugin that adds homes to your world!">
+<meta name="twitter:image" content="https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp">
+<link rel="icon" href="https://cdn.modrinth.com/data/g6MPHvvG/662f7821b9c0664e6e8bd0e3941bca9522ea755a_96.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "SetHome", "description": "A plugin that adds homes to your world!", "url": "https://invv111.github.io/homess/", "image": "https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.19 – 1.21.9 (Paper, Spigot)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/homess", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 3663}, "softwareVersion": "2.0"}</script>
+</head>
+<body>
+
+<header class="top">
+  <a class="me" href="/">
+    <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+    Invv
+  </a>
+  <nav aria-label="Main">
+    <a href="/#popular">Popular</a>
+    <a href="/#next">Coming next</a>
+    <a href="/#all">All plugins</a>
+    <a href="https://modrinth.com/user/invv">Modrinth</a>
+  </nav>
+  <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+</header>
+
+<main id="page" data-static>
+  <section class="p-hero" style="--glow:rgba(211, 186, 144, 0.35)">
+    <div class="bgimg" style="background-image:url('https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp')"></div>
+    <div class="p-hero-inner">
+      <p class="crumb"><a href="/">Home</a> / <a href="/#all">Server plugins</a> / SetHome</p>
+      <img class="p-icon" src="https://cdn.modrinth.com/data/g6MPHvvG/662f7821b9c0664e6e8bd0e3941bca9522ea755a_96.webp" alt="" width="128" height="128">
+      <div class="p-title"><h1>SetHome</h1><p>A plugin that adds homes to your world!</p></div>
+      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/homess/version/iJYmzNY2">Download 2.0</a>
+        <a class="btn btn-ghost" href="https://modrinth.com/plugin/homess">Open on Modrinth</a></div>
+      <div class="p-facts"><span class="chip"><b data-live="downloads">3,663</b> downloads</span><span class="chip"><b data-live="followers">1</b> followers</span><span class="chip">Minecraft <b>1.19 – 1.21.9</b></span><span class="chip">Paper, Spigot</span><span class="chip">Updated <b>10 months ago</b></span></div>
+    </div>
+  </section>
+
+  <div class="p-body">
+    <div>
+      <div class="gallery">
+          <figure class="g-main" style="margin:0">
+            <img id="g-img" src="https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp" alt="SetHome">
+            <figcaption class="g-cap" id="g-cap" hidden></figcaption>
+          </figure>
+          
+        </div>
+      <article class="md"><p><strong>[⚠️]NOTE!</strong> If u have aby issue with the plugin please report to in our discord!</p>
+<p><strong>HomesPlugin Description</strong>
+A lightweight plugin for managing multiple named homes on a Minecraft server ✨. Players can set, teleport to, delete, and rename home locations. Data is stored in homes.yml, with a configurable home limit.
+<strong>Main Commands 🚀</strong></p>
+<p><strong>1</strong> /sethome <name> :
+Sets a home at your current location (including facing direction) 📍.
+Permission: homes.sethome
+<strong>2</strong> /homes or /homes <name>
+No args: Lists all your homes (sorted) with current/max count 📜.
+With name: Teleports you to that home ⚡.
+/homes reload (admin only): Reloads config and homes 🔄.
+Permission: homes.use</p>
+<p><strong>3</strong> /delhome <name>
+Deletes a home 🗑️.
+Permission: homes.delhome
+<strong>4</strong> /rehome &lt;old_name&gt; &lt;new_name&gt;
+Renames an existing home (respects limit) ✏️.
+Permission: homes.rehome</p>
+<p><strong>Configuration ⚙️</strong></p>
+<ul>
+<li>config.yml (auto-created)<pre><code>max-homes: 5
+</code></pre>
+Change the maximum number of homes per player 🔢.</li>
+<li>homes.yml (auto-created): Stores all player homes with coords, world, yaw, and pitch.</li>
+</ul>
+<p><strong>Permissions 🔑</strong></p>
+<ul>
+<li>homes.use – View/teleport to homes</li>
+<li>homes.sethome – Set homes</li>
+<li>homes.delhome – Delete homes</li>
+<li>homes.rehome – Rename homes</li>
+<li>homes.admin – Reload command</li>
+</ul>
+<p><strong>Key Features &amp; Notes 😎</strong></p>
+<ul>
+<li>Home names are case-insensitive (no caps drama) 😌</li>
+<li>Saves exact facing direction on teleport 👀</li>
+<li>Skips homes in missing worlds (logs warning) ⚠️</li>
+<li>Homes stored in memory for speed, saved on changes/shutdown 💾</li>
+<li>Instant teleport – no delay! 🚀</li>
+<li>Console can't use commands 🚫</li>
+</ul>
+<p>Clean, efficient, and perfect for survival servers needing multiple named teleport points 🌍. Easy to extend if you want more features! 🚀</p>
+</article>
+    </div>
+    <aside class="side">
+      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>2.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/homess/version/iJYmzNY2">Download</a></li><li><div><b>1.0-SNAPSHOT</b><span>1.19 – 1.21.9 · 1 year ago</span></div><a href="https://modrinth.com/plugin/homess/version/k5g8kFCx">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/homess/versions">All versions on Modrinth</a></p></div>
+      <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://modrinth.com/plugin/homess">Modrinth page</a></li><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
+    </aside>
+  </div>
+
+  <section class="others">
+    <div class="block-head center"><h2>More plugins</h2></div>
+    <ul class="grid"><li class="card"><a href="/antyxray/" style="--glow:rgba(65, 28, 17, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
+    <p>A Simple Antyxray plugin for your server</p>
+    <span class="meta"><span><b>80,177</b> downloads</span><span>1.20 – 26.3</span></span>
+  </a></li><li class="card"><a href="/tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
+    <p>A Simple plugin for teleport on your server</p>
+    <span class="meta"><span><b>33,111</b> downloads</span><span>1.18 – 26.3</span></span>
+  </a></li><li class="card"><a href="/musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
+    <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
+    <span class="meta"><span><b>15,460</b> downloads</span><span>1.21.4 – 26.2</span></span>
+  </a></li><li class="card"><a href="/set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
+    <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
+    <p>A simple plugin for spawn in your world</p>
+    <span class="meta"><span><b>9,388</b> downloads</span><span>1.19 – 26.3</span></span>
+  </a></li></ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-about">
+      <a class="me" href="/"><img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">Invv</a>
+      <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
+      <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+    </div>
+    <div><h4>Server plugins</h4><ul id="foot-plugins"><li><a href="/antyxray/">Antixray</a></li><li><a href="/tpaa/">Tpa</a></li><li><a href="/set.spawn/">SetSpawn</a></li><li><a href="/seeinventory/">InventorySee</a></li><li><a href="/homess/">SetHome</a></li><li><a href="/drop.heads/">PlayerHeadDrop</a></li></ul></div>
+    <div><h4>Fabric mods</h4><ul id="foot-mods"><li><a href="/musicdisplay/">MusicDisplay</a></li><li><a href="/better-vanilla-zoom/">Better Zoom</a></li><li><a href="/freelook-unsense/">Freelook</a></li></ul></div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://modrinth.com/user/invv">Modrinth profile</a></li>
+        <li><a href="https://discord.gg/E9hpUj3E6G">Discord</a></li>
+        <li><a href="https://github.com/Invv111">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">Descriptions and download counts come from Modrinth. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script id="page-data" type="application/json">{"slug": "homess", "local": false, "gallery": [{"url": "https://cdn.modrinth.com/data/g6MPHvvG/images/7bd0d0125125dc8c026454465a23e07bb10cc892_350.webp", "title": null, "description": null}]}</script>
+<script src="/data.js" defer></script>
+<script src="/common.js" defer></script>
+<script src="/plugin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- same as the site: dark panel, torch-amber glow, pixel "I" with a lit top edge -->
+  <defs>
+    <radialGradient id="g" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#f3a53a" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#f3a53a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#1d1d1a"/>
+  <rect width="32" height="32" rx="8" fill="url(#g)"/>
+  <rect x=".5" y=".5" width="31" height="31" rx="7.5" fill="none" stroke="#3a3a32"/>
+  <g shape-rendering="crispEdges">
+    <path d="M9 7h14v4h-5v10h5v4H9v-4h5V11H9z" fill="#f3a53a"/>
+    <path d="M9 7h14v1.5H9z" fill="#ffcf7a"/>
+    <path d="M9 21h5v1.5H9zM18 21h5v1.5h-5z" fill="#ffcf7a"/>
+    <path d="M9 23.5h14V25H9z" fill="#b8701c"/>
+  </g>
+</svg>

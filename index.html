@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invv – Minecraft plugins</title>
+<meta name="description" content="Minecraft server plugins and Fabric mods by Invv. Paper, Folia, Spigot and Purpur, from 1.18 to 26.x.">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="img/elevate-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="me" href="./">
+    <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+    Invv
+  </a>
+  <nav aria-label="Main">
+    <a href="#popular">Popular</a>
+    <a href="#next">Coming next</a>
+    <a href="#all">All plugins</a>
+    <a href="https://modrinth.com/user/invv">Modrinth</a>
+  </nav>
+  <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Discord</a>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="kicker">Paper · Folia · Spigot · Purpur · Fabric</p>
+      <h1>Plugins for your Minecraft server</h1>
+      <p class="lede">Teleports, graves, an anti-xray, nametags, elevators and more.
+        One jar, no dependencies, no resource pack. Drop it in and play.</p>
+      <div class="cta">
+        <a class="btn" href="#all">Browse plugins</a>
+        <a class="btn btn-ghost" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+      </div>
+      <dl class="stats">
+        <div><dt>Projects</dt><dd id="s-projects">19</dd></div>
+        <div><dt>Downloads</dt><dd id="s-downloads">165k</dd></div>
+        <div><dt>Versions</dt><dd>1.18 – 26.3</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="plate">
+        <img src="img/elevate-1.jpg" alt="" width="1600" height="900">
+      </div>
+      <!-- plugin icons float around the plate, filled in by app.js -->
+      <div class="floaters" id="floaters"></div>
+    </div>
+  </section>
+
+  <!-- POPULAR -->
+  <section class="block" id="popular" aria-labelledby="popular-h">
+    <div class="block-head center">
+      <h2 id="popular-h">Most downloaded</h2>
+      <p>The ones servers keep coming back for.</p>
+    </div>
+    <div class="podium" id="podium"></div>
+  </section>
+
+  <!-- COMING NEXT -->
+  <section class="block next" id="next" aria-labelledby="next-h">
+    <div class="block-head center">
+      <h2 id="next-h">Coming next</h2>
+      <p>Finished, tested on real servers, and on their way to Modrinth.</p>
+    </div>
+
+    <div class="showcase">
+      <article class="show show-elevate">
+        <div class="show-img"><img src="img/elevate-2.jpg" alt="Arriving on floor 3 of 6, the library, with the floor title on screen" loading="lazy" width="1600" height="900"></div>
+        <div class="show-body">
+          <h3><img src="img/elevate-logo.png" alt="" width="36" height="36">Elevate</h3>
+          <p class="pitch">Jump to go up a floor, sneak to go down.</p>
+          <ul>
+            <li>16 craftable colors, from wool and an ender pearl</li>
+            <li>Floor titles, and floor names set in an anvil</li>
+            <li>Any distance, blocked floors are skipped</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="show show-reap">
+        <div class="show-img"><img src="img/reap-2.jpg" alt="A netherite hoe reaping a 7 by 7 square of wheat, ring by ring" loading="lazy" width="1600" height="900"></div>
+        <div class="show-body">
+          <h3><img src="img/reap-logo.png" alt="" width="36" height="36">Reap</h3>
+          <p class="pitch">Right-click to harvest. Swing a hoe to reap the field.</p>
+          <ul>
+            <li>Auto-replant using a seed from the drops</li>
+            <li>Hoes cut up to 7×7 in a wave, Fortune works</li>
+            <li>Farmland can't be trampled</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="show show-lounge">
+        <div class="show-img"><img src="img/lounge-1.jpg" alt="Players sitting on stair benches around a campfire at sunset" loading="lazy" width="1600" height="900"></div>
+        <div class="show-body">
+          <h3><img src="img/lounge-logo.png" alt="" width="36" height="36">Lounge</h3>
+          <p class="pitch">Sit, lay and crawl anywhere.</p>
+          <ul>
+            <li>Sit on any stair, slab or carpet</li>
+            <li><code>/lay</code> with your own skin, <code>/crawl</code> through gaps</li>
+            <li>Ride your friends around</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ALL -->
+  <section class="block all" id="all" aria-labelledby="all-h">
+    <div class="block-head center">
+      <h2 id="all-h">Every plugin and mod</h2>
+      <p>Click one to see its page.</p>
+    </div>
+
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Show">
+        <button type="button" data-kind="all" aria-pressed="true">All</button>
+        <button type="button" data-kind="plugin" aria-pressed="false">Server plugins</button>
+        <button type="button" data-kind="mod" aria-pressed="false">Fabric mods</button>
+      </div>
+      <div class="sort" id="sort" data-value="downloads">
+        <button type="button" class="sort-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Sort by: Most downloaded">
+          <svg class="sort-ico" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2v12M4 14l-2.5-2.5M4 14l2.5-2.5M12 14V2M12 2 9.5 4.5M12 2l2.5 2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="sort-label">Most downloaded</span>
+          <svg class="sort-chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="sort-menu" role="listbox" aria-label="Sort by" tabindex="-1" hidden>
+          <li role="option" data-value="downloads" aria-selected="true"><b>Most downloaded</b><span>Biggest first</span></li>
+          <li role="option" data-value="updated" aria-selected="false"><b>Recently updated</b><span>Latest releases first</span></li>
+          <li role="option" data-value="title" aria-selected="false"><b>Name</b><span>A to Z</span></li>
+        </ul>
+      </div>
+      <label class="search"><span class="sr">Search</span>
+        <input id="q" type="search" placeholder="Search, e.g. tpa" autocomplete="off">
+      </label>
+    </div>
+
+    <ul class="grid" id="grid" aria-live="polite"></ul>
+    <p class="empty" id="empty" hidden>Nothing matches that. Try a shorter word, or <button type="button" id="clear">show everything</button>.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="foot-about">
+      <a class="me" href="./">
+        <img src="https://cdn.modrinth.com/data/aez8bvsH/c0323bc363b971000ed5648dc1de5e3a43ae13f4_96.webp" alt="" width="34" height="34">
+        Invv
+      </a>
+      <p>Found a bug or want a feature? Tell me on Discord, I read everything.</p>
+      <a class="btn btn-small" href="https://discord.gg/E9hpUj3E6G">Join the Discord</a>
+    </div>
+    <div>
+      <h4>Server plugins</h4>
+      <ul id="foot-plugins"></ul>
+    </div>
+    <div>
+      <h4>Fabric mods</h4>
+      <ul id="foot-mods"></ul>
+    </div>
+    <div>
+      <h4>Links</h4>
+      <ul>
+        <li><a href="https://modrinth.com/user/invv">Modrinth profile</a></li>
+        <li><a href="https://discord.gg/E9hpUj3E6G">Discord</a></li>
+        <li><a href="https://github.com/Invv111">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">Download counts come live from Modrinth. Not affiliated with Mojang or Microsoft.</p>
+</footer>
+
+<script src="common.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

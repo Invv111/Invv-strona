@@ -1,0 +1,108 @@
+// Shared data + helpers for index.html and plugin.html
+const USER = "invv";
+const API = "https://api.modrinth.com/v2";
+
+// Plugins that are finished but not on Modrinth yet. Their pages are built from content/<slug>.md.
+// Once one is published, delete it from here and it will show up from Modrinth automatically.
+const LOCAL = {
+  elevate: {
+    slug: "elevate", title: "Elevate", local: true,
+    description: "Jump to go up a floor, sneak to go down. Craftable elevators in 16 colors, floor numbers and named floors.",
+    icon_url: "img/elevate-logo.png", color: 0x6fa8dc,
+    loaders: ["bukkit", "spigot", "paper", "purpur", "folia"], game_versions: ["1.20", "26.3"],
+    downloads: 0, followers: 0, updated: "2026-11-01T00:00:00Z", categories: ["transportation", "utility"],
+  },
+  reap: {
+    slug: "reap", title: "Reap", local: true,
+    description: "Right-click to harvest and auto-replant. Hoes reap a whole area in a wave, Fortune works, farmland never gets trampled.",
+    icon_url: "img/reap-logo.png", color: 0xe0b040,
+    loaders: ["bukkit", "spigot", "paper", "purpur", "folia"], game_versions: ["1.20", "26.3"],
+    downloads: 0, followers: 0, updated: "2026-11-01T00:00:00Z", categories: ["game-mechanics", "utility"],
+  },
+  lounge: {
+    slug: "lounge", title: "Lounge", local: true,
+    description: "Sit on stairs, slabs and carpets, /sit, /lay with your own skin, /crawl and ride other players.",
+    icon_url: "img/lounge-logo.png", color: 0xc0784a,
+    loaders: ["paper", "folia"], game_versions: ["1.20", "26.3"],
+    downloads: 0, followers: 0, updated: "2026-11-01T00:00:00Z", categories: ["social", "game-mechanics"],
+  },
+};
+
+const nf = new Intl.NumberFormat("en-US");
+const NICE = { paper: "Paper", folia: "Folia", spigot: "Spigot", purpur: "Purpur", bukkit: "Bukkit", fabric: "Fabric", quilt: "Quilt", neoforge: "NeoForge", forge: "Forge" };
+
+const isMod = (p) => ["fabric", "quilt", "neoforge", "forge"].some((l) => p.loaders.includes(l));
+const typeOf = (p) => (isMod(p) ? "Fabric mod" : "Server plugin");
+const pageUrl = (p) => `plugin.html?p=${encodeURIComponent(p.slug)}`;
+const modrinthUrl = (p) => `https://modrinth.com/${isMod(p) ? "mod" : "plugin"}/${encodeURIComponent(p.slug)}`;
+
+function esc(s) {
+  return String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function short(n) {
+  if (n >= 1e6) return (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+  if (n >= 1e4) return Math.round(n / 1e3) + "k";
+  if (n >= 1e3) return (n / 1e3).toFixed(1).replace(/\.0$/, "") + "k";
+  return String(n);
+}
+
+function versionRange(p) {
+  const v = (p.game_versions || []).filter((x) => /^\d/.test(x));
+  if (!v.length) return "";
+  return v.length === 1 ? v[0] : `${v[0]} – ${v[v.length - 1]}`;
+}
+
+function platforms(p) {
+  const order = ["paper", "folia", "spigot", "purpur", "bukkit", "fabric", "quilt", "neoforge", "forge"];
+  let list = order.filter((l) => p.loaders.includes(l));
+  if (list.includes("spigot") && list.includes("bukkit")) list = list.filter((l) => l !== "bukkit");
+  return list.map((l) => NICE[l]).join(", ");
+}
+
+function ago(iso) {
+  const days = Math.floor((Date.now() - new Date(iso)) / 864e5);
+  if (days < 1) return "today";
+  if (days < 31) return `${days} day${days === 1 ? "" : "s"} ago`;
+  const m = Math.floor(days / 30);
+  if (m < 12) return `${m} month${m === 1 ? "" : "s"} ago`;
+  const y = Math.floor(m / 12);
+  return `${y} year${y === 1 ? "" : "s"} ago`;
+}
+
+// Modrinth gives each project a color (an int). Turn it into a soft glow.
+function glow(p, a = 0.32) {
+  const c = typeof p.color === "number" ? p.color : 0xf3a53a;
+  return `rgba(${(c >> 16) & 255}, ${(c >> 8) & 255}, ${c & 255}, ${a})`;
+}
+
+async function loadProjects() {
+  try {
+    const r = await fetch(`${API}/user/${USER}/projects`);
+    if (!r.ok) throw new Error(r.status);
+    return await r.json();
+  } catch {
+    try { return await (await fetch("projects.json")).json(); } catch { return []; }
+  }
+}
+
+function cardHtml(p) {
+  const meta = p.local
+    ? `<span>Coming soon</span><span>${esc(versionRange(p))}</span>`
+    : `<span><b>${nf.format(p.downloads)}</b> downloads</span><span>${esc(versionRange(p))}</span>`;
+  return `<li class="card"><a href="${pageUrl(p)}" style="--glow:${glow(p)}">
+    <img class="icon" src="${esc(p.icon_url)}" alt="" width="64" height="64" loading="lazy">
+    <span class="head"><h3>${esc(p.title)}</h3><span class="type">${typeOf(p)}</span></span>
+    <p>${esc(p.description)}</p>
+    <span class="meta">${meta}</span>
+  </a></li>`;
+}
+
+function fillFooter(projects) {
+  const top = [...projects].sort((a, b) => b.downloads - a.downloads);
+  const li = (p) => `<li><a href="${pageUrl(p)}">${esc(p.title)}</a></li>`;
+  const fp = document.getElementById("foot-plugins");
+  const fm = document.getElementById("foot-mods");
+  if (fp) fp.innerHTML = top.filter((p) => !isMod(p)).slice(0, 6).map(li).join("");
+  if (fm) fm.innerHTML = top.filter(isMod).slice(0, 6).map(li).join("");
+}

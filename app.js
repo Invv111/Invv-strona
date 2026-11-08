@@ -113,14 +113,6 @@ q.addEventListener("input", renderGrid);
 })();
 document.getElementById("clear").addEventListener("click", () => { q.value = ""; setKind("all"); });
 
-// the "coming next" cards open their own pages
-document.querySelectorAll(".show").forEach((el) => {
-  const slug = [...el.classList].find((c) => c.startsWith("show-"))?.slice(5);
-  if (!slug || !LOCAL[slug]) return;
-  el.insertAdjacentHTML("afterbegin", `<span class="soon">Coming soon</span>`);
-  el.querySelector(".show-body").insertAdjacentHTML("beforeend", `<a class="open" href="${ROOT}${slug}/">Read more</a>`);
-});
-
 // Draw at once from the data built into data.js, then quietly refresh from Modrinth.
 // Only the parts whose numbers changed are redrawn, so nothing jumps or restarts.
 const topSlugs = (list, n) => [...list].sort((a, b) => b.downloads - a.downloads).slice(0, n).map((p) => p.slug).join();

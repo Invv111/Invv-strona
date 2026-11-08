@@ -20,6 +20,15 @@
   "downloads": 0,
   "followers": 0,
   "updated": "2026-11-01T00:00:00Z",
+  "modrinth": "elevate",
+  "pitch": "Jump to go up a floor, sneak to go down.",
+  "points": [
+   "16 craftable colors, from wool and an ender pearl",
+   "Floor titles, and floor names set in an anvil",
+   "Any distance, blocked floors are skipped"
+  ],
+  "show": "img/elevate-2",
+  "show_alt": "Arriving on floor 3 of 6, the library, with the floor title on screen",
   "gallery": [
    {
     "url": "img/elevate/1-elevate.webp",
@@ -114,6 +123,15 @@
   "downloads": 0,
   "followers": 0,
   "updated": "2026-11-01T00:00:00Z",
+  "modrinth": "reap-harvest",
+  "pitch": "Right-click to harvest. Swing a hoe to reap the field.",
+  "points": [
+   "Auto-replant using a seed from the drops",
+   "Hoes cut up to 7×7 in a wave, Fortune works",
+   "Farmland can't be trampled"
+  ],
+  "show": "img/reap-2",
+  "show_alt": "A netherite hoe reaping a 7 by 7 square of wheat, ring by ring",
   "gallery": [
    {
     "url": "img/reap/1-reap.webp",
@@ -191,6 +209,15 @@
   "downloads": 0,
   "followers": 0,
   "updated": "2026-11-01T00:00:00Z",
+  "modrinth": "lounge-invv",
+  "pitch": "Sit, lay and crawl anywhere.",
+  "points": [
+   "Sit on any stair, slab or carpet",
+   "`/lay` with your own skin, `/crawl` through gaps",
+   "Ride your friends around"
+  ],
+  "show": "img/lounge-1",
+  "show_alt": "Players sitting on stair benches around a campfire at sunset",
   "gallery": [
    {
     "url": "img/lounge/1-take-a-seat.webp",

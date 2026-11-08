@@ -198,11 +198,19 @@ main { overflow-x: clip; }
   position: relative; border-radius: var(--r); overflow: hidden; background: var(--panel);
   display: flex; flex-direction: column; text-decoration: none;
 }
-.show-elevate { grid-row: span 2; }
+/* the number of tiles sets the layout: n1 one wide tile, n2 two, n3 one big + two, n4 a 2x2 grid */
+.showcase.n1 { grid-template-columns: minmax(0, 760px); justify-content: center; }
+.showcase.n2, .showcase.n4 { grid-template-columns: 1fr 1fr; }
+.showcase.n3 > .show:first-child { grid-row: span 2; }
+a.show { color: inherit; text-decoration: none; transition: transform .25s, background .25s; }
+a.show:hover { background: var(--panel-2); }
+a.show:hover .open { text-decoration: underline; }
+.next-empty { text-align: center; color: var(--muted); }
+.next-empty a { color: var(--torch); }
 .show-img { overflow: hidden; }
 .show-img img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .6s; }
-.show-elevate .show-img { flex: 1; }
-.show-elevate .show-img img { height: 100%; aspect-ratio: auto; }
+.showcase.n3 > .show:first-child .show-img { flex: 1; }
+.showcase.n3 > .show:first-child .show-img img { height: 100%; aspect-ratio: auto; }
 .show:hover .show-img img { transform: scale(1.04); }
 .show-body { padding: 22px 24px 24px; }
 .show h3 { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 26px; font-weight: 800; line-height: 1; }
@@ -430,8 +438,9 @@ input[type="search"] { width: 220px; }
   .hero { grid-template-columns: 1fr; padding-top: 40px; padding-bottom: 40px; }
   .hero-art { max-width: 560px; width: 100%; margin: 0 auto; }
   .showcase { grid-template-columns: 1fr; }
-  .show-elevate { grid-row: auto; }
-  .show-elevate .show-img img { aspect-ratio: 16 / 9; }
+  .showcase.n2, .showcase.n4 { grid-template-columns: 1fr; }
+  .showcase.n3 > .show:first-child { grid-row: auto; }
+  .showcase.n3 > .show:first-child .show-img img { aspect-ratio: 16 / 9; }
   .grid, .others .grid { grid-template-columns: repeat(2, 1fr); }
   .foot-inner { grid-template-columns: 1fr 1fr; }
   .p-hero-inner { grid-template-columns: auto 1fr; }

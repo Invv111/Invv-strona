@@ -370,6 +370,18 @@ def main():
         gv = [x for x in s["game_versions"] if re.match(r"^\d", x)]
         s["game_versions"] = [gv[0], gv[-1]] if len(gv) > 1 else gv
 
+    # a "coming next" plugin that is now on Modrinth (same slug, the slug in local.json, or the same name)
+    # leaves the section and gets its real page; its old address redirects there
+    mine = {p["slug"] for p in projects}
+    by_title = {p["title"].strip().lower(): p["slug"] for p in projects}
+    released = {}
+    for slug, p in list(local.items()):
+        hit = next((x for x in (p.get("modrinth"), slug) if x in mine), None) or by_title.get(p["title"].strip().lower())
+        if hit:
+            released[slug] = hit
+            del local[slug]
+            print(f"{p['title']} is out on Modrinth as '{hit}': moved out of Coming next")
+
     everything = projects + list(local.values())
     built = []
 
@@ -404,11 +416,15 @@ def main():
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
         f.write("\n".join(urls) + "\n</urlset>\n")
 
-    patch_index()
+    for old_slug, new_slug in released.items():
+        if old_slug != new_slug:
+            write_redirect(old_slug, new_slug)
+
+    patch_index(local)
     write_404()
 
     # drop pages of projects that no longer exist
-    names = {s for s, _ in built}
+    names = {s for s, _ in built} | {k for k, v in released.items() if k != v}
     for d in os.listdir(ROOT):
         path = os.path.join(ROOT, d, "index.html")
         if d not in names and os.path.isfile(path) and os.path.isfile(os.path.join(ROOT, d, ".generated")):
@@ -419,6 +435,53 @@ def main():
     print(f"built {len(built)} pages")
 
 
+def write_redirect(old_slug, new_slug):
+    d = os.path.join(ROOT, old_slug)
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Moved</title>
+<link rel="canonical" href="{SITE}/{e(new_slug)}/">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0; url=../{e(new_slug)}/">
+</head><body><p><a href="../{e(new_slug)}/">This plugin is out, open its page</a></p></body></html>
+""")
+    open(os.path.join(d, ".generated"), "w").close()
+
+
+def showcase(local):
+    """the "Coming next" tiles on the home page"""
+    items = list(local.values())
+    if not items:
+        return (f'<p class="next-empty">Nothing in the works right now. '
+                f'New plugins are announced first on <a href="{DISCORD}">Discord</a>.</p>')
+    tiles = []
+    for p in items:
+        img = p.get("show") or (p["gallery"][0]["url"].rsplit(".", 1)[0] if p.get("gallery") else "")
+        if p.get("show"):
+            pic = (f'<img src="{e(img)}-800.webp" srcset="{e(img)}-800.webp 800w, {e(img)}-1400.webp 1400w" '
+                   f'sizes="(max-width: 860px) 92vw, 640px" alt="{e(p.get("show_alt", ""))}" '
+                   f'loading="lazy" decoding="async" width="1600" height="900">')
+        elif img:
+            pic = f'<img src="{e(img)}.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">'
+        else:
+            pic = ""
+        points = "".join(f"<li>{md.renderInline(x)}</li>" for x in p.get("points", []))
+        tiles.append(f"""      <a class="show" href="{e(p['slug'])}/">
+        <span class="soon">Coming soon</span>
+        <div class="show-img">{pic}</div>
+        <div class="show-body">
+          <h3><img src="{e(p['icon_url'])}" alt="" width="36" height="36">{e(p['title'])}</h3>
+          <p class="pitch">{e(p.get('pitch') or p['description'])}</p>
+          {f'<ul>{points}</ul>' if points else ''}
+          <span class="open">Read more</span>
+        </div>
+      </a>""")
+    n = min(len(items), 4)
+    return f'<div class="showcase n{n}">\n' + "\n".join(tiles) + "\n    </div>"
+
+
 def write_page(p, body, gallery, versions, everything):
     d = os.path.join(ROOT, p["slug"])
     os.makedirs(d, exist_ok=True)
@@ -427,10 +490,12 @@ def write_page(p, body, gallery, versions, everything):
     open(os.path.join(d, ".generated"), "w").close()
 
 
-def patch_index():
-    """put the real site address into the home page's link-preview tags"""
+def patch_index(local):
+    """put the real site address into the home page's link-preview tags, and render "Coming next" """
     path = os.path.join(ROOT, "index.html")
     s = open(path, encoding="utf-8").read()
+    s = re.sub(r"(<!-- next:[^>]*-->).*?(<!-- /next -->)",
+               lambda m: m.group(1) + "\n    " + showcase(local) + "\n    " + m.group(2), s, flags=re.S)
     tags = f"""<!-- og: filled in by scripts/build.py with the site address -->
 <link rel="canonical" href="{SITE}/">
 <meta property="og:type" content="website">

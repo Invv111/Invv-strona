@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AuthSystem – Server plugin for Minecraft 1.21 – 1.21.9</title>
+<title>AuthSystem – Server plugin for Minecraft 1.21 – 26.3</title>
 <meta name="description" content="The plugin allows secure player login and registration on a Minecraft server, protecting accounts from unauthorized access.">
 <link rel="canonical" href="https://invv111.github.io/Invv-strona/authsystem/">
 <meta name="theme-color" content="#0a1829">
@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuthSystem", "description": "The plugin allows secure player login and registration on a Minecraft server, protecting accounts from unauthorized access.", "url": "https://invv111.github.io/Invv-strona/authsystem/", "image": "https://cdn.modrinth.com/data/kL1NMRZq/a9761303e099efbef2b377e8f54381cb24d12ca4_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 1.21.9 (Paper, Spigot)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/authsystem", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 223}, "softwareVersion": "1.0"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "AuthSystem", "description": "The plugin allows secure player login and registration on a Minecraft server, protecting accounts from unauthorized access.", "url": "https://invv111.github.io/Invv-strona/authsystem/", "image": "https://cdn.modrinth.com/data/kL1NMRZq/a9761303e099efbef2b377e8f54381cb24d12ca4_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/authsystem", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 228}, "softwareVersion": "1.1"}</script>
 </head>
 <body>
 
@@ -48,40 +48,124 @@
       <p class="crumb"><a href="../">Home</a> / <a href="../#all">Server plugins</a> / AuthSystem</p>
       <img class="p-icon" src="https://cdn.modrinth.com/data/kL1NMRZq/a9761303e099efbef2b377e8f54381cb24d12ca4_96.webp" alt="" width="128" height="128">
       <div class="p-title"><h1>AuthSystem</h1><p>The plugin allows secure player login and registration on a Minecraft server, protecting accounts from unauthorized access.</p></div>
-      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/authsystem/version/vtx0hYNC">Download 1.0</a>
+      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/authsystem/version/FicfyfuV">Download 1.1</a>
         <a class="btn btn-ghost" href="https://modrinth.com/plugin/authsystem">Open on Modrinth</a></div>
-      <div class="p-facts"><span class="chip"><b data-live="downloads">223</b> downloads</span><span class="chip">Minecraft <b>1.21 – 1.21.9</b></span><span class="chip">Paper, Spigot</span><span class="chip">Updated <b>10 months ago</b></span></div>
+      <div class="p-facts"><span class="chip"><b data-live="downloads">228</b> downloads</span><span class="chip">Minecraft <b>1.21 – 26.3</b></span><span class="chip">Paper, Folia, Spigot, Purpur</span><span class="chip">Updated <b>today</b></span></div>
     </div>
   </section>
 
   <div class="p-body">
     <div>
       
-      <article class="md"><p><strong>[⚠️]NOTE!</strong> If u have aby issue with the plugin please report to in our discord!</p>
-<p><strong>AuthSystem</strong> is a lightweight and secure player authentication plugin for Minecraft 1.21 (Paper/Spigot).
-<strong>Features:</strong></p>
-<p>/register <password> <password> – Create an account (first time only).
-/login <password> or /l <password> – Log in after joining.
-/changepassword <old> <new> <new> – Change your password.</p>
-<p><strong>Admin commands (/verify – requires verify.admin permission):</strong></p>
-<p>/verify reload – Reload player data.
-/verify reset <player> – Delete player's account (forces re-registration).
-/verify changepass <player> &lt;new_password&gt; – Force-set a new password.</p>
-<p><strong>Protection:</strong>
-Unlogged players cannot:</p>
-<p><strong>Chat:</strong>
-Use commands (except auth commands)
-Break/place blocks
-Interact with blocks
-Stay longer than 2 minutes (auto-kick)</p>
-<p><strong>Security:</strong></p>
-<p>Passwords are hashed with SHA-256 + unique random salt (never stored in plain text).
-Data saved in plugins/AuthSystem/players.yml.</p>
-<p>Simple, fast, secure – perfect for survival or small servers that need basic login protection without heavy plugins.</p>
+      <article class="md"><h1>🔐 AuthSystem</h1>
+<p><strong>A lightweight, secure login &amp; register plugin for Paper and Folia, from 1.21 to 26.x+.</strong></p>
+<p>AuthSystem protects player accounts on your server (great for offline-mode / cracked servers). Every player has to <code>/register</code> once and then <code>/login</code> each time they join. Until they log in, they can't move, chat, run commands or touch the world.</p>
+<hr />
+<h2>✨ Features</h2>
+<ul>
+<li>✅ <strong>Paper &amp; Folia</strong>: fully thread-safe, built on the region/entity schedulers</li>
+<li>✅ <strong>Minecraft 1.21 – 26.x+</strong>: one jar for every version</li>
+<li>🔒 <strong>Secure passwords</strong>: PBKDF2-SHA256 hashing with a random salt (old accounts are upgraded automatically)</li>
+<li>⚡ <strong>No lag</strong>: hashing and saving run off the main thread</li>
+<li>🧊 <strong>Full lock until login</strong>: no moving, chat, commands, blocks, items, inventory, PvP or damage</li>
+<li>⏱️ <strong>Login timeout</strong> with a kick and repeating reminders showing the time left</li>
+<li>🚫 <strong>Brute-force protection</strong>: kick after X wrong passwords</li>
+<li>🛠️ <strong>Admin commands</strong>: reset accounts and change passwords, from in-game or the console</li>
+<li>📁 <strong>Simple storage</strong>: everything lives in <code>players.yml</code>, with no database needed</li>
+<li>🪶 <strong>Lightweight</strong>: a single small jar with no dependencies</li>
+</ul>
+<hr />
+<h2>📜 Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/register &lt;password&gt; &lt;password&gt;</code></td>
+<td>Create an account (alias: <code>/reg</code>)</td>
+</tr>
+<tr>
+<td><code>/login &lt;password&gt;</code></td>
+<td>Log in (alias: <code>/l</code>)</td>
+</tr>
+<tr>
+<td><code>/changepassword &lt;old&gt; &lt;new&gt; &lt;new&gt;</code></td>
+<td>Change your password (aliases: <code>/changepass</code>, <code>/cp</code>)</td>
+</tr>
+<tr>
+<td><code>/verify reload</code></td>
+<td>Reload config and players.yml</td>
+</tr>
+<tr>
+<td><code>/verify reset &lt;player&gt;</code></td>
+<td>Delete a player's account</td>
+</tr>
+<tr>
+<td><code>/verify changepass &lt;player&gt; &lt;password&gt;</code></td>
+<td>Set a new password for a player</td>
+</tr>
+</tbody>
+</table>
+<h2>🔑 Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>verify.admin</code></td>
+<td>Access to <code>/verify</code> admin commands</td>
+<td>OP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>⚙️ Configuration</h2>
+<pre><code class="language-yaml"># Time in seconds that a player has to log in or register after joining the server.
+login-timeout: 120
+enable-kick-on-timeout: true
+
+# How often (in seconds) the reminder is repeated. 0 = only once.
+reminder-interval: 15
+
+min-password-length: 4
+max-password-length: 64
+
+messages:
+  timeout-kick: &quot;You didn't log in within the time limit!&quot;
+  login-reminder: &quot;Type &amp;e/login &lt;password&gt; &amp;fto log in! (You have {time} seconds left)&quot;
+  register-reminder: &quot;Type &amp;e/register &lt;password&gt; &lt;password&gt; &amp;fto create an account! (You have {time} seconds left)&quot;
+
+login-attempts:
+  enabled: true
+  max-attempts: 5
+  reset-on-success: true
+  kick-message: &quot;Too many wrong password attempts! Try again later.&quot;
+</code></pre>
+<p>Color codes with <code>&amp;</code> are supported.</p>
+<hr />
+<h2>📦 Installation</h2>
+<ol>
+<li>Download the jar and put it in your <code>plugins/</code> folder.</li>
+<li>Start the server (Paper or Folia, 1.21+). Java 21 or newer is required.</li>
+<li>Edit <code>plugins/AuthSystem/config.yml</code> if you want, then run <code>/verify reload</code>.</li>
+</ol>
+<p><strong>Updating from 1.0?</strong> Drop in the new jar. Existing accounts and the config keep working, and passwords are upgraded to the new hashing on the player's next login.</p>
+<hr />
+<h2>💬 Support</h2>
+<p>Found a bug or have an idea? Leave a comment or open an issue. Feedback is welcome!</p>
 </article>
     </div>
     <aside class="side">
-      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/authsystem/version/vtx0hYNC">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/authsystem/versions">All versions on Modrinth</a></p></div>
+      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.1</b><span>1.21.11 – 26.3 · today</span></div><a href="https://modrinth.com/plugin/authsystem/version/FicfyfuV">Download</a></li><li><div><b>1.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/authsystem/version/vtx0hYNC">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/authsystem/versions">All versions on Modrinth</a></p></div>
       <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://modrinth.com/plugin/authsystem">Modrinth page</a></li><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
     </aside>
   </div>
@@ -92,22 +176,22 @@ Data saved in plugins/AuthSystem/players.yml.</p>
     <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
     <p>A Simple Antyxray plugin for your server</p>
-    <span class="meta"><span><b>80,744</b> downloads</span><span>1.20 – 26.3</span></span>
+    <span class="meta"><span><b>80,948</b> downloads</span><span>1.20 – 26.3</span></span>
   </a></li><li class="card"><a href="../tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
     <p>A Simple plugin for teleport on your server</p>
-    <span class="meta"><span><b>33,290</b> downloads</span><span>1.18 – 26.3</span></span>
+    <span class="meta"><span><b>33,354</b> downloads</span><span>1.18 – 26.3</span></span>
   </a></li><li class="card"><a href="../musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
     <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
-    <span class="meta"><span><b>15,574</b> downloads</span><span>1.21.4 – 26.2</span></span>
+    <span class="meta"><span><b>15,613</b> downloads</span><span>1.21.4 – 26.2</span></span>
   </a></li><li class="card"><a href="../set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
     <p>A simple plugin for spawn in your world</p>
-    <span class="meta"><span><b>9,491</b> downloads</span><span>1.19 – 26.3</span></span>
+    <span class="meta"><span><b>9,520</b> downloads</span><span>1.19 – 26.3</span></span>
   </a></li></ul>
   </section>
 </main>

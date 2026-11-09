@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>InventorySee – Server plugin for Minecraft 1.21 – 1.21.9</title>
+<title>InventorySee – Server plugin for Minecraft 1.21 – 26.3</title>
 <meta name="description" content="The plugin allows admins to safely view and edit players&#x27; inventories (/invsee) and view ender chests (/ecsee).">
 <link rel="canonical" href="https://invv111.github.io/Invv-strona/seeinventory/">
 <meta name="theme-color" content="#41381c">
@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preload" href="../fonts/bricolage-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "InventorySee", "description": "The plugin allows admins to safely view and edit players' inventories (/invsee) and view ender chests (/ecsee).", "url": "https://invv111.github.io/Invv-strona/seeinventory/", "image": "https://cdn.modrinth.com/data/4S0VD9Wv/beaf649f7661e3fafe857267056ee699bfc4423b_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 1.21.9 (Paper, Spigot)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/seeinventory", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 7894}, "softwareVersion": "1.0.0"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "InventorySee", "description": "The plugin allows admins to safely view and edit players' inventories (/invsee) and view ender chests (/ecsee).", "url": "https://invv111.github.io/Invv-strona/seeinventory/", "image": "https://cdn.modrinth.com/data/4S0VD9Wv/beaf649f7661e3fafe857267056ee699bfc4423b_96.webp", "applicationCategory": "GameApplication", "applicationSubCategory": "Server plugin", "operatingSystem": "Minecraft 1.21 – 26.3 (Paper, Folia, Spigot, Purpur)", "author": {"@type": "Person", "name": "Invv", "url": "https://modrinth.com/user/invv"}, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "downloadUrl": "https://modrinth.com/plugin/seeinventory", "interactionStatistic": {"@type": "InteractionCounter", "interactionType": "https://schema.org/DownloadAction", "userInteractionCount": 7923}, "softwareVersion": "1.1.0"}</script>
 </head>
 <body>
 
@@ -48,21 +48,147 @@
       <p class="crumb"><a href="../">Home</a> / <a href="../#all">Server plugins</a> / InventorySee</p>
       <img class="p-icon" src="https://cdn.modrinth.com/data/4S0VD9Wv/beaf649f7661e3fafe857267056ee699bfc4423b_96.webp" alt="" width="128" height="128">
       <div class="p-title"><h1>InventorySee</h1><p>The plugin allows admins to safely view and edit players&#x27; inventories (/invsee) and view ender chests (/ecsee).</p></div>
-      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/seeinventory/version/EduTIlEp">Download 1.0.0</a>
+      <div class="p-actions"><a class="btn" href="https://modrinth.com/plugin/seeinventory/version/sOqQnui8">Download 1.1.0</a>
         <a class="btn btn-ghost" href="https://modrinth.com/plugin/seeinventory">Open on Modrinth</a></div>
-      <div class="p-facts"><span class="chip"><b data-live="downloads">7,894</b> downloads</span><span class="chip"><b data-live="followers">4</b> followers</span><span class="chip">Minecraft <b>1.21 – 1.21.9</b></span><span class="chip">Paper, Spigot</span><span class="chip">Updated <b>10 months ago</b></span></div>
+      <div class="p-facts"><span class="chip"><b data-live="downloads">7,923</b> downloads</span><span class="chip"><b data-live="followers">4</b> followers</span><span class="chip">Minecraft <b>1.21 – 26.3</b></span><span class="chip">Paper, Folia, Spigot, Purpur</span><span class="chip">Updated <b>today</b></span></div>
     </div>
   </section>
 
   <div class="p-body">
     <div>
       
-      <article class="md"><p><strong>[⚠️]NOTE!</strong> If u have aby issue with the plugin please report to in our discord!</p>
-<p>InvSee is an advanced Bukkit/Spigot plugin for Minecraft servers that allows administrators to safely view and edit other players' inventories using the /invsee &lt;player_name&gt; command. It opens a custom 45-slot inventory window replicating the target's equipment (including armor and off-hand items), with protected slots containing barriers and the player's head that cannot be removed or manipulated—even in case of glitches, the plugin automatically restores them. Any changes made by the admin (moving, adding, or removing items) are synchronized in real-time to the target's actual inventory. Additionally, the /ecsee &lt;player_name&gt; command provides direct view access to a player's ender chest without editing capabilities. The plugin requires permissions invsee.use and ecsee.use, handles click, drag, close, and quit events, ensuring full security and no exploits—perfect for moderation on PvP or survival servers!</p>
+      <article class="md"><blockquote>
+<p><strong>⚠️ NOTE:</strong> If you have any issue with the plugin, please report it on our <a href="https://discord.gg/8Pg7Vgmyty">Discord</a>!</p>
+</blockquote>
+<h2>InventorySee</h2>
+<p>A lightweight moderation plugin that lets staff <strong>view and edit players' inventories and ender chests</strong> — online <strong>and offline</strong> — safely, live, and without item duplication.</p>
+<p><strong>Supports Minecraft 1.21 → 26+</strong> on <strong>Paper, Purpur, Folia and Spigot</strong> (one jar for all of them).</p>
+<h3>✨ Features</h3>
+<ul>
+<li><strong><code>/invsee &lt;player&gt;</code></strong> – full inventory: hotbar, storage, <strong>armor</strong> and <strong>off-hand</strong>.</li>
+<li><strong><code>/ecsee &lt;player&gt;</code></strong> – the player's <strong>ender chest</strong>.</li>
+<li><strong>Offline players</strong> – open and edit inventories / ender chests of players who are not on the server. Changes are saved straight to their player file (a <code>.dat_old</code> backup is kept).</li>
+<li><strong>View-only mode</strong> – give staff <code>invsee.use</code> without <code>invsee.edit</code> and they can only look, not touch.</li>
+<li><strong>Change logs</strong> – every edit is saved to <code>plugins/InvSee/logs/&lt;date&gt;.log</code>, e.g. <code>Admin edited Steve's inventory: -5 DIAMOND</code>.</li>
+<li><strong>Configurable messages</strong> – all texts and window titles in <code>config.yml</code> (colors with <code>&amp;</code>), so you can translate them into any language. Reload with <code>/invseereload</code>.</li>
+<li><strong>Live two-way sync</strong> – your changes reach the player instantly, and the window refreshes when the player's own items change.</li>
+<li><strong>No dupes, no item loss</strong> – the plugin never overwrites a player with an outdated copy of their inventory. If an offline player joins while you're editing, the window closes safely before the server loads their data.</li>
+<li><strong>Protected slots</strong> – barriers and the player's head can't be taken, moved, shift-clicked, dragged or double-click collected.</li>
+<li><strong>Folia ready</strong> – all reads and writes run on the correct region thread.</li>
+<li>Zero dependencies – just drop it into <code>plugins/</code>.</li>
+</ul>
+<h3>📜 Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Aliases</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/invsee &lt;player&gt;</code></td>
+<td><code>/checkinv</code>, <code>/seeinv</code></td>
+<td><code>invsee.use</code></td>
+</tr>
+<tr>
+<td><code>/ecsee &lt;player&gt;</code></td>
+<td><code>/checkender</code>, <code>/seeender</code>, <code>/endersee</code></td>
+<td><code>ecsee.use</code></td>
+</tr>
+<tr>
+<td><code>/invseereload</code></td>
+<td><code>/isreload</code></td>
+<td><code>invsee.reload</code></td>
+</tr>
+</tbody>
+</table>
+<h3>🔑 Permissions</h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>invsee.use</code></td>
+<td>Open inventories (view only on its own)</td>
+</tr>
+<tr>
+<td><code>invsee.edit</code></td>
+<td>Change items in <code>/invsee</code></td>
+</tr>
+<tr>
+<td><code>invsee.offline</code></td>
+<td>Use <code>/invsee</code> on offline players</td>
+</tr>
+<tr>
+<td><code>ecsee.use</code></td>
+<td>Open ender chests (view only on its own)</td>
+</tr>
+<tr>
+<td><code>ecsee.edit</code></td>
+<td>Change items in <code>/ecsee</code></td>
+</tr>
+<tr>
+<td><code>ecsee.offline</code></td>
+<td>Use <code>/ecsee</code> on offline players</td>
+</tr>
+<tr>
+<td><code>invsee.reload</code></td>
+<td>Reload the config</td>
+</tr>
+<tr>
+<td><code>invsee.*</code></td>
+<td>Everything above</td>
+</tr>
+</tbody>
+</table>
+<p>All permissions are given to <strong>OP</strong> by default.</p>
+<h3>🧩 Slot layout (<code>/invsee</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Slots</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–36</td>
+<td>Hotbar + main inventory</td>
+</tr>
+<tr>
+<td>37–40</td>
+<td>Helmet, chestplate, leggings, boots</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Off-hand</td>
+</tr>
+<tr>
+<td>42–44</td>
+<td>Barriers (locked)</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Player head (locked)</td>
+</tr>
+</tbody>
+</table>
+<h3>✅ Requirements</h3>
+<ul>
+<li>Paper / Purpur / Folia / Spigot <strong>1.21 – 26.x</strong></li>
+<li>Java 21+ (Java 25 for Minecraft 26.x)</li>
+<li>Offline players need Paper, Purpur or Folia (not available on plain Spigot)</li>
+</ul>
 </article>
     </div>
     <aside class="side">
-      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.0.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/seeinventory/version/EduTIlEp">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/seeinventory/versions">All versions on Modrinth</a></p></div>
+      <div class="box"><h2>Latest versions</h2><ul class="vers"><li><div><b>1.1.0</b><span>1.21.11 – 26.3 · today</span></div><a href="https://modrinth.com/plugin/seeinventory/version/sOqQnui8">Download</a></li><li><div><b>1.0.0</b><span>1.21 – 1.21.9 · 10 months ago</span></div><a href="https://modrinth.com/plugin/seeinventory/version/EduTIlEp">Download</a></li></ul><p class="box-more"><a href="https://modrinth.com/plugin/seeinventory/versions">All versions on Modrinth</a></p></div>
       <div class="box"><h2>Links</h2><ul class="links"><li><a href="https://modrinth.com/plugin/seeinventory">Modrinth page</a></li><li><a href="https://discord.gg/E9hpUj3E6G">Discord, for help and bug reports</a></li></ul></div>
     </aside>
   </div>
@@ -73,22 +199,22 @@
     <img class="icon" src="https://cdn.modrinth.com/data/7TbtGLSU/8c2bf0d9c6bc74216f66fdf065f62e32481c04d6_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>Antixray</h3><span class="type">Server plugin</span></span>
     <p>A Simple Antyxray plugin for your server</p>
-    <span class="meta"><span><b>80,744</b> downloads</span><span>1.20 – 26.3</span></span>
+    <span class="meta"><span><b>80,948</b> downloads</span><span>1.20 – 26.3</span></span>
   </a></li><li class="card"><a href="../tpaa/" style="--glow:rgba(4, 4, 4, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/ZRgKHQlC/6b0f4b43330b976872a381021f79311bf122b0b7_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>Tpa</h3><span class="type">Server plugin</span></span>
     <p>A Simple plugin for teleport on your server</p>
-    <span class="meta"><span><b>33,290</b> downloads</span><span>1.18 – 26.3</span></span>
+    <span class="meta"><span><b>33,354</b> downloads</span><span>1.18 – 26.3</span></span>
   </a></li><li class="card"><a href="../musicdisplay/" style="--glow:rgba(20, 20, 20, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/v03oz0bB/16d086d984c5bfbc1f96f4b38ff788bc31215529_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>MusicDisplay</h3><span class="type">Fabric mod</span></span>
     <p>This mod displays the currently playing music on Spotify. You can easily adjust the volume, pause the song, and more.</p>
-    <span class="meta"><span><b>15,574</b> downloads</span><span>1.21.4 – 26.2</span></span>
+    <span class="meta"><span><b>15,613</b> downloads</span><span>1.21.4 – 26.2</span></span>
   </a></li><li class="card"><a href="../set.spawn/" style="--glow:rgba(38, 42, 36, 0.32)">
     <img class="icon" src="https://cdn.modrinth.com/data/nFg6AgpS/8d69f0c6a172d70804b6d27d04f0e7237ff6071b_96.webp" alt="" width="64" height="64" loading="lazy">
     <span class="head"><h3>SetSpawn</h3><span class="type">Server plugin</span></span>
     <p>A simple plugin for spawn in your world</p>
-    <span class="meta"><span><b>9,491</b> downloads</span><span>1.19 – 26.3</span></span>
+    <span class="meta"><span><b>9,520</b> downloads</span><span>1.19 – 26.3</span></span>
   </a></li></ul>
   </section>
 </main>
